@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Link from 'next/link';
 
 class Chap_tem extends Component {
     state = { 
@@ -10,8 +9,12 @@ class Chap_tem extends Component {
      } 
     render() { 
         return (
-            <div className='text-3xl text-center m-3'><a href={this.state.linkto}><p>{this.state.trans}</p>
-            <p>{this.state.id}{this.state.title}</p></a></div>
+            <div className='text-center m-3'>
+                <a href={this.state.linkto}>
+                    <p className='text-1xl'>{this.state.trans}</p>
+                    <p className='text-3xl'>{this.state.id} {this.state.title}</p>
+                </a>
+            </div>
         );
     }
 }

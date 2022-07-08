@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 import Chap_tem from './/components/chap_tem';
+import Navbar from './components/navbar';
+import styles from '../styles/Home.module.css'
 
 class ChapMath extends Component { 
     state = { 
     entries: [
-    {id: 1, title: '', trans: '', linkto: '/parmath'},
+    {id: 1, title: 'Ἡ Γενεαλογία τοῦ Ἰησοῦ Χριστοῦ', trans: 'Jesus Christ s Genealogy', linkto: '/parmath'},
     {id: 2, title: '', trans: '', linkto: '/'},
     {id: 3, title: '', trans: '', linkto: '/'},
     {id: 4, title: '', trans: '', linkto: '/'},
@@ -36,8 +38,11 @@ class ChapMath extends Component {
 }
     render() { 
         return (
-        <div>{this.state.entries.map(entry =>
+        <div className={styles.container}>
+        <Navbar/>
+        <div className='grid grid-cols-4'>{this.state.entries.map(entry =>
         <Chap_tem id={entry.id} title={entry.title} trans={entry.trans} linkto={entry.linkto}/>)}</div>
+        </div>
         );
     }
 }

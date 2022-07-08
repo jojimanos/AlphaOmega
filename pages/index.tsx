@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import Navbar from './components/navbar'
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +14,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar/>
+
       <main className={styles.main}>
+
         <h1 className={styles.title}>
           Welcome to Evangel.io
         </h1>
@@ -23,15 +27,18 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <Link href={'/gosp'}><a className={styles.card}>
-            <h2>Old Testament &rarr;</h2>
-            <p>From Genesis to the Maccabees</p>
-          </a></Link>
+          
 
           <Link  href={'/'}><a className={styles.card}>
-            <h2>New Testament &rarr;</h2>
+            <h2>Old Testament &rarr;</h2>
             <p>From the Gospels to the Apocalypse</p>
           </a></Link>
+        
+          <Link href={'/gosp'}><a className={styles.card}>
+            <h2>New Testament &rarr;</h2>
+            <p>From Genesis to the Maccabees</p>
+          </a></Link>
+        
         </div>
       </main>
 

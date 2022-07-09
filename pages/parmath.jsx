@@ -35,7 +35,7 @@ class Parmath extends Component {
         } 
     render() { 
         return <div className={styles.container}>
-            <Navbar/>
+            {/*<Navbar/>*/}
         <div className='grid grid-rows-2 gap-3'><pre className='grid grid-cols-8 gap-1 text-center'>{this.state.entries1.map(entry => 
             <Word id={entry.id} body={entry.body} trans={entry.trans}/>)}</pre>
             <pre className='grid grid-cols-8 gap-1 text-center'>{this.state.entries2.map(entry => 

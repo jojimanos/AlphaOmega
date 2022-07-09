@@ -39,7 +39,7 @@ class ChapMath extends Component {
     render() { 
         return (
         <div className={styles.container}>
-        <Navbar/>
+        {/*<Navbar/>*/}
         <div className='grid grid-cols-4'>{this.state.entries.map(entry =>
         <Chap_tem id={entry.id} title={entry.title} trans={entry.trans} linkto={entry.linkto}/>)}</div>
         </div>

@@ -15,7 +15,7 @@ class Gosp extends Component {
     render() { 
         return (     
         <div className={styles.container}>
-        <Navbar/>
+        {/*<Navbar/>*/}
         <div className='grid grid-cols-2 grid-rows-2'>    
         {this.state.entries.map(entry=> 
         <Gosp_tem key={entry.id} id={entry.id} title={entry.title} trans={entry.trans} linkto={entry.linkto}/>)}</div>

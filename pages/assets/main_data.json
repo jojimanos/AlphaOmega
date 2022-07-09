@@ -1,0 +1,44 @@
+{
+    "main_data": [
+      {
+        "locale": "en-US",
+        "title": "",
+        "main_title": "Welcome to Evangel.io",
+        "description": "",
+        "image": "",
+        "menu": "Menu",
+        "settings": "Settings",
+        "search": "Search"
+      },
+      {
+        "locale": "es-ES",
+        "title": "",
+        "main_title": "Welcome to Evangel.io",
+        "description": "",
+        "image": "",
+        "menu": "Menu",
+        "settings": "Ajustes",
+        "search": "Búsqueda"
+      },
+      {
+        "locale": "it-IT",
+        "title": "",
+        "main_title": "Welcome to Evangel.io",
+        "description": "",
+        "image": "",
+        "menu": "Menu",
+        "settings": "Adattamento",
+        "search": "Scrutare"
+      },
+      {
+        "locale": "gr-GR",
+        "title": "",
+        "main_title": "Καλῶς ὁρίσατε στὸ Evangel.io",
+        "description": "",
+        "image": "",
+        "menu": "Κυρίως Σελλίδα",
+        "settings": "Ῥυθμίσεις",
+        "search": "Ἀναζήτηση"
+      }
+    ]
+  }

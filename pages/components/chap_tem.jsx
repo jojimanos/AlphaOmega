@@ -1,25 +1,20 @@
-import React, {Component} from 'react';
 import Link from 'next/link'
 
-class Chap_tem extends Component {
-    state = { 
-        id: this.props.id,
-        title: this.props.title,
-        trans: this.props.trans,
-        linkto: this.props.linkto
-     } 
-    render() { 
-        return (
+function Chapmath_tem (props) {
+    
+    const {chapsets} = props
+
+    const {title_1, link_1} = chapsets
+        
+    return (
             <div className='text-center m-3'>
-                <Link href={this.state.linkto}>
+                <Link href={link_1}>
                     <div>
-                    <p className='text-1xl'>{this.state.trans}</p>
-                    <p className='text-3xl'>{this.state.id} {this.state.title}</p>
+                    <p className='text-3xl'>1 {title_1}</p>
                     </div>                
                 </Link>
             </div>
         );
     }
-}
  
-export default Chap_tem;
+export default Chapmath_tem;

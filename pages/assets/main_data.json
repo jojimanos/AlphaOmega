@@ -2,9 +2,13 @@
     "main_data": [
       {
         "locale": "en-US",
-        "title": "",
         "main_title": "Welcome to Evangel.io",
-        "description": "",
+        "description": "A site dedicated to the study of Christian scriptures",
+        "OldTest": "Old Testament",
+        "NewTest": "New Tetstament",
+        "Old_description":"From Genesis to the Macabees",
+        "New_description":"From Gospels to the Apocalypse",
+        "powered": "Powered by",
         "image": "",
         "menu": "Menu",
         "settings": "Settings",
@@ -12,7 +16,6 @@
       },
       {
         "locale": "es-ES",
-        "title": "",
         "main_title": "Welcome to Evangel.io",
         "description": "",
         "image": "",
@@ -22,7 +25,6 @@
       },
       {
         "locale": "it-IT",
-        "title": "",
         "main_title": "Welcome to Evangel.io",
         "description": "",
         "image": "",
@@ -32,9 +34,13 @@
       },
       {
         "locale": "gr-GR",
-        "title": "",
         "main_title": "Καλῶς ὁρίσατε στὸ Evangel.io",
-        "description": "",
+        "description": "Ἑναν διαδικτυακὸ χῶρο ἀφιερωμένο στὴ μελέτη τῶν χριστιανικῶν γραφῶν",
+        "OldTest": "Παλαιὰ Διαθήκη",
+        "NewTest": "Καινὴ Διαθήκη",
+        "Old_description":"Ἀπὸ τὴν Γένεση στοὺ Μακαβαίους",
+        "New_description":"Ἀπὸ τὰ Εὐαγγέλια στὴν Ἀποκάλυψη",
+        "powered": "Δύναμις",
         "image": "",
         "menu": "Κυρίως Σελλίδα",
         "settings": "Ῥυθμίσεις",

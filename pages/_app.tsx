@@ -40,8 +40,9 @@ return (
     <div>{Data.main_data
               .filter(p => p.locale === locale)
               .map((navbarsets, i) => {
-              return <Navbar key={i} navbarsets={navbarsets} />;
-              })}</div>
+              return <Navbar key={i} navbarsets={navbarsets}/>;
+              })}
+    </div>
     <Component {...pageProps} />
   </ThemeProvider>
 )

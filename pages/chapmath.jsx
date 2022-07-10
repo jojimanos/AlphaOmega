@@ -1,10 +1,15 @@
 import React, {Component} from 'react';
-import Chap_tem from './/components/chap_tem';
+import Chapmath_tem from './/components/chap_tem';
 import Navbar from './components/navbar';
 import styles from '../styles/Home.module.css'
+import Data from './assets/chap_data.json'
+import {useRouter} from 'next/router'
 
-class ChapMath extends Component { 
-    state = { 
+function ChapMath () { 
+
+    const{ locale, locales, asPath} = useRouter()
+
+    {/*state = { 
     entries: [
     {id: 1, title: 'Ἡ Γενεαλογία τοῦ Ἰησοῦ Χριστοῦ', trans: 'Jesus Christ s Genealogy', linkto: '/parmath'},
     {id: 2, title: '', trans: '', linkto: '/'},
@@ -35,16 +40,14 @@ class ChapMath extends Component {
     {id: 27, title: '', trans: '', linkto: '/'},
     {id: 28, title: '', trans: '', linkto: '/'},
     ]
-}
-    render() { 
+*/}
+     
         return (
-        <div className={styles.container}>
-        {/*<Navbar/>*/}
-        <div className='grid grid-cols-4'>{this.state.entries.map(entry =>
-        <Chap_tem id={entry.id} title={entry.title} trans={entry.trans} linkto={entry.linkto}/>)}</div>
-        </div>
-        );
-    }
+            <div>{Data.chap_data
+                .filter(p => p.locale === locale)
+                .map((chapsets, i) => {
+                return <Chapmath_tem key={i} chapsets={chapsets}/>;
+                })}
+      </div>)
 }
- 
 export default ChapMath;

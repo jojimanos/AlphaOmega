@@ -1,0 +1,26 @@
+{
+    "gosp_data": [
+    {
+      "locale": "en-US",
+      "title_1": "Mathew",
+      "title_2": "Mark",
+      "title_3": "Luke",
+      "title_4": "John",
+      "link_1": "/chapmath",
+      "link_2": "/",
+      "link_3": "/",
+      "link_4": "/"
+    },
+    {
+      "locale": "gr-GR",
+      "title_1": "Κατὰ Ματθαῖον",
+      "title_2": "Κατὰ Μάρκον",
+      "title_3": "Κατὰ Λουκὰν",
+      "title_4": "Κατὰ Ἰωάννην",
+      "link_1": "/chapmath",
+      "link_2": "/",
+      "link_3": "/",
+      "link_4": "/"
+    }
+]
+}

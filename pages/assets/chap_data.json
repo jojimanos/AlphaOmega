@@ -1,0 +1,14 @@
+{
+"chap_data": [
+  {
+    "locale": "en-US",
+    "title_1": "Jesus Christ s Genealogy",
+    "link_1": "/parmath"
+  },  
+  {
+      "locale": "gr-GR",
+      "title_1": "Ἡ Γενεαλογία τοῦ Ἰησοῦ Χριστοῦ",
+      "link_1": "/parmath"
+    }
+]
+} 

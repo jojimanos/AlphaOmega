@@ -6,9 +6,11 @@ import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import Navbar from './components/navbar'
 import Data from './assets/main_data.json'
-
+import Main_tem from "./components/main_tem"
 
 const Home: NextPage = () => {
+
+  const{ locale, locales, asPath} = useRouter()
 
   return (
     <div className={styles.container}>
@@ -18,46 +20,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <div>{Data.main_data
+                .filter(p => p.locale === locale)
+                .map((mainsets, i) => {
+                return <Main_tem key={i} mainsets={mainsets}/>;
+                })}
+      </div>
+      </div>
 
-        <h1 className={styles.title}>
-          Welcome to Evangel.io
-        </h1>
-
-        <p className={styles.description}>
-          A site dedicated to the study of Christian scriptures
-        </p>
-
-        <div className={styles.grid}>
-          
-
-          <Link  href={'/'}><a className={styles.card}>
-            <h2>Old Testament &rarr;</h2>
-            <p>From the Gospels to the Apocalypse</p>
-          </a></Link>
-        
-          <Link href={'/gosp'}><a className={styles.card}>
-            <h2>New Testament &rarr;</h2>
-            <p>From Genesis to the Maccabees</p>
-          </a></Link>
-        
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/icxc.png" alt="ICXC Logo" width={25} height={25} />
-          </span>
-        </a>
-      </footer>
-    </div>
-  )
+        )
 }
 
 export default Home

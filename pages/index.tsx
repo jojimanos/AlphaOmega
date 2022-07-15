@@ -7,6 +7,8 @@ import styles from '../styles/Home.module.css'
 import Navbar from './components/navbar'
 import Data from './assets/main_data.json'
 import Main_tem from "./components/main_tem"
+import fetch from 'isomorphic-unfetch'
+
 
 const Home: NextPage = () => {
 

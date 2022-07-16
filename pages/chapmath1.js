@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../util/mongodb";
+import fetchNewTestCollection from "../util/bibleClient/bibleDataWrapper";
 
 export default function Par2({ newtest }) {
   return (
@@ -16,18 +16,13 @@ export default function Par2({ newtest }) {
 }
 
 export async function getServerSideProps() {
-  const { db } = await connectToDatabase();
+  let newtest = fetchNewTestCollection();
 
-  const newtest = await db
-    .collection("newtest")
-    .find({})
-    .sort({})
-    .limit(20)
-    .toArray();
+  newtest = newtest.trim();
 
   return {
     props: {
-      newtest: JSON.parse(JSON.stringify(newtest)),
+      newtest: JSON.parse((newtest)),
     },
   };
 }

@@ -1,8 +1,7 @@
+import React, {Component} from "react";
 import { connectToDatabase } from "../mongodb";
 
-function fetchNewTestCollection() {
-
-    async (req, res) => {
+export default function fetchNewTestCollection() {
         const { db } = await connectToDatabase();
       
         const newtest = await db
@@ -12,8 +11,4 @@ function fetchNewTestCollection() {
           .limit(20)
           .toArray();
       
-        res.json(newtest);
       };
-} 
-
-export default fetchNewTestCollection

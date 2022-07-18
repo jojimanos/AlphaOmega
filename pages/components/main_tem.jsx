@@ -1,6 +1,8 @@
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'  
 import Image from 'next/image'
+import PopUp from './popup'
+import PopUp2 from './popup2'
 
 function Main_tem (props) {
 
@@ -33,6 +35,8 @@ function Main_tem (props) {
             <p>{New_description}</p>
           </a></Link>
         
+        <PopUp2/>
+
         </div>
       </main>
 

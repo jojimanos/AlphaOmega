@@ -8,6 +8,7 @@ import Navbar from './components/navbar'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import '../styles/popup2.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Dropdown from './dropdown'
 
 function Navbar (props) {
             const {navbarsets} = props
@@ -19,6 +20,7 @@ function Navbar (props) {
                     <a className="">{settings}</a>
                 </Link>
             </p>
+            <Dropdown/>
             <p className="text-center">
                 <Link href="/">
                     <a className="">{search}</a>

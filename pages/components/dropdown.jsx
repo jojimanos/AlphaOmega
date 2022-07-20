@@ -44,7 +44,7 @@ class Dropdown extends React.Component {
         id="dropdownMenuButton1"
         data-bs-toggle="dropdown"
         aria-expanded="false" onClick={this.handleButtonClick}>
-                  Dropdown
+                  {this.props.settings}
                 </button>
                 {this.state.open && (
                 <ul>

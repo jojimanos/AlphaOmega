@@ -17,10 +17,10 @@ function Navbar (props) {
             <div className="grid grid-cols-3">
             <p className="text-center">
                 <Link href="/">
-                    <a className="">{settings}</a>
+                    <a className="">{}</a>
                 </Link>
             </p>
-            <Dropdown/>
+            <Dropdown settings={settings}/>
             <p className="text-center">
                 <Link href="/">
                     <a className="">{search}</a>

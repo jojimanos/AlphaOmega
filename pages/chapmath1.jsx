@@ -1,23 +1,34 @@
 import { connectToDatabase } from "../util/mongodb";
+import PopUp2 from './components/popup2'
+import jsxToString from 'jsx-to-string'
 
 export default function Par2({ newtest }) {
-  const par = 
-  <div><h1></h1><div>{newtest.map((x) => (<li><h2>{x.chap}</h2></li>))}</div></div>
+  const para = 
+  
+  <div>{newtest.map((x) => (<li key={x.chap}><h2>{x.chap}</h2></li>))}</div>
 
-  const paragraph = par.props.children
+  const par = jsxToString(para)
 
-  const handleClick = (word) => {
-    alert('Alert!')
-    console.log(word);
-    // handle the rest
-  };
+  const clickableWords = () => {
 
-  const renderParagraph = () => Array.from(paragraph)
-    .map((word) => <span onClick={() => handleClick(word)}>{word}</span>);
+    function dictionary(w) {
+      let link1 = "http://www.perseus.tufts.edu/hopper/morph?l="
+      let link2 = "&la=greek"
+      let link = link1 + w + link2 
+      open(link)
+    }
+
+    const arr = Array.from(par)
+    const string = arr.join('')  
+    const words = string.split(/ /g );
+    return words.map(w => 
+      <a onClick={() => dictionary(w)}>  {w}  </a>
+    );
+  }
 
   return (
     <div className="App">
-      {renderParagraph()}
+      {clickableWords()}
     </div>
   );
 }

@@ -1,9 +1,7 @@
-import { popper } from "@popperjs/core";
 import React, {Component} from "react";
-import {createPopper} from '@popperjs/core'
-import Link from "next/link";
 
-class Dropdown extends React.Component {
+class Dropdown extends Component {
+
     state = {
         open: false,
       };
@@ -52,7 +50,8 @@ class Dropdown extends React.Component {
               text-gray-700
               hover:bg-gray-100
             "
-            href="#">Action</a></li>
+            href="#">
+              <button>Action</button></a></li>
                   <li><a class="
               dropdown-item
               text-sm

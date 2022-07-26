@@ -1,5 +1,4 @@
 import { connectToDatabase } from "../util/mongodb";
-import PopUp2 from './components/popup2'
 import jsxToString from 'jsx-to-string'
 
 export default function Par2({ newtest }) {
@@ -19,8 +18,9 @@ export default function Par2({ newtest }) {
     }
 
     const arr = Array.from(par)
-    const string = arr.join('')  
-    const words = string.split(/ /g );
+    const string = arr.join('')
+    const string2 = string.slice(17)  
+    const words = string2.split(/ /g );
     return words.map(w => 
       <a onClick={() => dictionary(w)}>  {w}  </a>
     );

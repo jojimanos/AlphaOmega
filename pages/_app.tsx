@@ -9,6 +9,8 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import '../styles/popup2.css'
+import Dropdown from './components/dropdown'
+import SwitchTheme from './components/themeswitch'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -24,7 +26,6 @@ const{ locale, locales, asPath} = useRouter()
 return (
   <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
     <GlobalStyles />
-    <button onClick={toggleTheme}>Switch Theme</button>
     <div className="">
         <div className="">
           {locales?.map((l, i) => {
@@ -44,6 +45,7 @@ return (
               return <Navbar key={i} navbarsets={navbarsets}/>;
               })}
     </div>
+    <SwitchTheme toggleTheme={toggleTheme}/>
     <Component {...pageProps} />
   </ThemeProvider>
 )

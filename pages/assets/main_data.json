@@ -12,7 +12,9 @@
         "image": "",
         "menu": "Menu",
         "settings": "Settings",
-        "search": "Search"
+        "search": "Search",
+        "languageswitch": "Language",
+        "themeswitch": "Switch Theme"
       },
       {
         "locale": "es-ES",
@@ -21,7 +23,9 @@
         "image": "",
         "menu": "Menu",
         "settings": "Ajustes",
-        "search": "Búsqueda"
+        "search": "Búsqueda",
+        "languageswitch": "Language",
+        "themeswitch": "Switch Theme"
       },
       {
         "locale": "it-IT",
@@ -30,7 +34,9 @@
         "image": "",
         "menu": "Menu",
         "settings": "Adattamento",
-        "search": "Scrutare"
+        "search": "Scrutare",
+        "languageswitch": "Language",
+        "themeswitch": "Switch Theme"
       },
       {
         "locale": "gr-GR",
@@ -44,7 +50,9 @@
         "image": "",
         "menu": "Κυρίως Σελλίδα",
         "settings": "Ῥυθμίσεις",
-        "search": "Ἀναζήτηση"
+        "search": "Ἀναζήτηση",
+        "languageswitch": "Γλῶσσα",
+        "themeswitch": "Ἀλλαγὴ Θέματος"
       }
     ]
   }

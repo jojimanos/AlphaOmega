@@ -26,7 +26,7 @@ const{ locale, locales, asPath} = useRouter()
 return (
   <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
     <GlobalStyles />
-    <div className="">
+    <div className="font-serif">
         <div className="">
           {locales?.map((l, i) => {
             return (
@@ -39,7 +39,7 @@ return (
           })}
         </div>
     </div>
-    <div>{Data.main_data
+    <div className='font-serif'>{Data.main_data
               .filter(p => p.locale === locale)
               .map((navbarsets, i) => {
               return <Navbar key={i} navbarsets={navbarsets}/>;

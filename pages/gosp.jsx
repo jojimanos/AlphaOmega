@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Gosp_tem from './/components/gosp_tem'
-import styles from '../styles/Home.module.css'
 import Data from './assets/gosp_data.json'
 import { useRouter } from "next/router";
 

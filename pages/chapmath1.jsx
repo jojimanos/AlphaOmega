@@ -27,7 +27,7 @@ export default function Par2({ newtest }) {
   }
 
   return (
-    <div className="App">
+    <div className="App font-serif">
       {clickableWords()}
     </div>
   );

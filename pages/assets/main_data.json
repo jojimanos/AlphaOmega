@@ -1,7 +1,7 @@
 {
     "main_data": [
       {
-        "locale": "en-US",
+        "locale": "English",
         "main_title": "Welcome to Evangel.io",
         "description": "A site dedicated to the study of Christian scriptures",
         "OldTest": "Old Testament",
@@ -39,7 +39,7 @@
         "themeswitch": "Switch Theme"
       },
       {
-        "locale": "gr-GR",
+        "locale": "Ἑλληνικά",
         "main_title": "Καλῶς ὁρίσατε στὸ Evangel.io",
         "description": "Ἑναν διαδικτυακὸ χῶρο ἀφιερωμένο στὴ μελέτη τῶν χριστιανικῶν γραφῶν",
         "OldTest": "Παλαιὰ Διαθήκη",

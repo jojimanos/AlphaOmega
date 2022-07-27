@@ -7,7 +7,7 @@ function Chapmath_tem (props) {
     const {title_1, link_1} = chapsets
         
     return (
-            <div className='text-center m-3'>
+            <div className='text-center m-3 font-serif'>
                 <Link href={link_1}>
                     <div>
                     <p className='text-3xl'>1 {title_1}</p>

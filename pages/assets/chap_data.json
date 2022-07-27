@@ -1,12 +1,12 @@
 {
 "chap_data": [
   {
-    "locale": "en-US",
+    "locale": "English",
     "title_1": "Jesus Christ s Genealogy",
     "link_1": "/chapmath1"
   },  
   {
-      "locale": "gr-GR",
+      "locale": "Ἑλληνικά",
       "title_1": "Ἡ Γενεαλογία τοῦ Ἰησοῦ Χριστοῦ",
       "link_1": "/chapmath1"
     }

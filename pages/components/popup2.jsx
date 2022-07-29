@@ -1,7 +1,5 @@
 import React from 'react';
 import Popup from 'reactjs-popup';
-import Link from 'next/link';
-import Script from 'next/script';
 
 export default () => ( <Popup trigger={<button className="button"> Open Modal 
 </button>} modal nested > 

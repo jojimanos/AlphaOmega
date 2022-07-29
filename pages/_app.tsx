@@ -9,7 +9,6 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import '../styles/popup2.css'
-import Dropdown from './components/dropdown'
 import SwitchTheme from './components/themeswitch'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -27,7 +26,7 @@ return (
   <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
     <GlobalStyles />
     <div className="font-serif">
-        <div className="">
+        <div className={styles.container}>
           {locales?.map((l, i) => {
             return (
               <span key={i} className={l === locale ? styles.selected : ''}>
@@ -45,6 +44,12 @@ return (
               return <Navbar key={i} navbarsets={navbarsets}/>;
               })}
     </div>
+    {/*<div className='font-serif'>{Data.main_data
+              .filter(p => p.locale === locale)
+              .map((themesets, i) => {
+              return <SwitchTheme key={i} themesets={themesets}/>;
+              })}
+            </div>*/}
     <SwitchTheme toggleTheme={toggleTheme}/>
     <Component {...pageProps} />
   </ThemeProvider>

@@ -40,8 +40,8 @@ return (
     </div>
     <div className='font-serif'>{Data.main_data
               .filter(p => p.locale === locale)
-              .map((navbarsets, i) => {
-              return <Navbar key={i} navbarsets={navbarsets}/>;
+              .map(({menu, settings, search, themeswitch}, i) => {
+              return <Navbar key={i} menu={menu} settings={settings} search={search} themeswitch={themeswitch} toggleTheme={toggleTheme}/>;
               })}
     </div>
     {/*<div className='font-serif'>{Data.main_data
@@ -50,7 +50,6 @@ return (
               return <SwitchTheme key={i} themesets={themesets}/>;
               })}
             </div>*/}
-    <SwitchTheme toggleTheme={toggleTheme}/>
     <Component {...pageProps} />
   </ThemeProvider>
 )

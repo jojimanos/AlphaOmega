@@ -6,8 +6,8 @@
         "description": "A site dedicated to the study of Christian scriptures",
         "OldTest": "Old Testament",
         "NewTest": "New Tetstament",
-        "Old_description":"From Genesis to the Macabees",
-        "New_description":"From the Gospels to the Apocalypse",
+        "Old_description":"From Genesis to the\nMacabees",
+        "New_description":"From the Gospels to\nthe Apocalypse",
         "powered": "Powered by",
         "image": "",
         "menu": "Menu",
@@ -17,7 +17,7 @@
         "themeswitch": "Switch Theme"
       },
       {
-        "locale": "es-ES",
+        "locale": "Espagnol",
         "main_title": "Welcome to Evangel.io",
         "description": "",
         "image": "",
@@ -39,13 +39,13 @@
         "themeswitch": "Switch Theme"
       },
       {
-        "locale": "el-EL",
+        "locale": "Greek",
         "main_title": "Καλῶς ὁρίσατε στὸ Evangel.io",
         "description": "Ἑναν διαδικτυακὸ χῶρο ἀφιερωμένο στὴ μελέτη τῶν χριστιανικῶν γραφῶν",
         "OldTest": "Παλαιὰ Διαθήκη",
         "NewTest": "Καινὴ Διαθήκη",
-        "Old_description":"Ἀπὸ τὴν Γένεση στοὺς Μακαβαίους",
-        "New_description":"Ἀπὸ τὰ Εὐαγγέλια στὴν Ἀποκάλυψη",
+        "Old_description":"Ἀπὸ τὴν Γένεση στοὺς\nΜακαβαίους",
+        "New_description":"Ἀπὸ τὰ Εὐαγγέλια στὴν\nἈποκάλυψη",
         "powered": "Δύναμις",
         "image": "",
         "menu": "Κυρίως Σελλίδα",

@@ -1,5 +1,6 @@
 import { connectToDatabase } from "../util/mongodb";
 import jsxToString from 'jsx-to-string'
+import styles from '../styles/Home.module.css'
 
 export default function Par2({ newtest }) {
   const para = 
@@ -27,8 +28,10 @@ export default function Par2({ newtest }) {
   }
 
   return (
-    <div className="App font-serif">
+    <div className={styles.container}>
+    <div className="App font-serif text-justify">
       {clickableWords()}
+    </div>
     </div>
   );
 }

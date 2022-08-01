@@ -2,7 +2,7 @@
     "main_data": [
       {
         "locale": "English",
-        "main_title": "Welcome to Evangel.io",
+        "main_title": "Welcome to ΑΩ",
         "description": "A site dedicated to the study of Christian scriptures",
         "OldTest": "Old Testament",
         "NewTest": "New Tetstament",
@@ -18,7 +18,7 @@
       },
       {
         "locale": "Espagnol",
-        "main_title": "Welcome to Evangel.io",
+        "main_title": "Welcome to ΑΩ",
         "description": "",
         "image": "",
         "menu": "Menu",
@@ -29,7 +29,7 @@
       },
       {
         "locale": "it-IT",
-        "main_title": "Welcome to Evangel.io",
+        "main_title": "Welcome to ΑΩ",
         "description": "",
         "image": "",
         "menu": "Menu",
@@ -40,7 +40,7 @@
       },
       {
         "locale": "Greek",
-        "main_title": "Καλῶς ὁρίσατε στὸ Evangel.io",
+        "main_title": "Καλῶς ὁρίσατε στὸ ΑΩ",
         "description": "Ἑναν διαδικτυακὸ χῶρο ἀφιερωμένο στὴ μελέτη τῶν χριστιανικῶν γραφῶν",
         "OldTest": "Παλαιὰ Διαθήκη",
         "NewTest": "Καινὴ Διαθήκη",

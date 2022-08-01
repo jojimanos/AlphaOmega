@@ -23,6 +23,7 @@ const toggleTheme = () => {
 const{ locale, locales, asPath} = useRouter()
 
 return (
+  <div className={styles.background}>
   <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
     <GlobalStyles />
     <div className="font-serif">
@@ -52,6 +53,7 @@ return (
             </div>*/}
     <Component {...pageProps} />
   </ThemeProvider>
+  </div>
 )
 }
 

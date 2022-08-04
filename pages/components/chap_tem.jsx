@@ -4,7 +4,7 @@ function Chapmath_tem (props) {
     
     const {chapsets} = props
 
-    const {title_1, title_2, title_3, link_1, link_2} = chapsets
+    const {title_1, title_2, title_3, title_4, link_1, link_2} = chapsets
         
     return (
             <div className='text-center m-3 font-serif'>
@@ -21,6 +21,11 @@ function Chapmath_tem (props) {
                 <Link href={link_2}>
                     <div>
                     <p className='text-3xl whitespace-pre py-2'>3 {title_3}</p>
+                    </div>
+                </Link>
+                <Link href={link_2}>
+                    <div>
+                    <p className='text-3xl whitespace-pre py-2'>4 {title_4}</p>
                     </div>
                 </Link>
             </div>

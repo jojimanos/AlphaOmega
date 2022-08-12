@@ -1,12 +1,8 @@
 import Link from "next/link";
 import Dropdown from './dropdown'
 import styles from '../../styles/Home.module.css'
-import SwitchTheme from "./themeswitch";
 
 function Navbar (props) {
-            {/*const {navbarsets} = props
-        
-const {menu, settings, search} = navbarsets*/}
         
         return (
             <div className={styles.container}>

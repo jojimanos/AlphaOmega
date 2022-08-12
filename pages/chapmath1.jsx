@@ -1,6 +1,7 @@
 import { connectToDatabase } from "../util/mongodb";
 import jsxToString from 'jsx-to-string'
 import styles from '../styles/Home.module.css'
+import clickableWords from "./components/cickableWords"
 
 export default function Par2({ newtest }) {
   const para = 
@@ -9,28 +10,10 @@ export default function Par2({ newtest }) {
 
   const par = jsxToString(para)
 
-  const clickableWords = () => {
-
-    function dictionary(w) {
-      let link1 = "http://www.perseus.tufts.edu/hopper/morph?l="
-      let link2 = "&la=greek"
-      let link = link1 + w + link2 
-      open(link)
-    }
-
-    const arr = Array.from(par)
-    const string = arr.join('')
-    const string2 = string.slice(17)  
-    const words = string2.split(/ /g );
-    return words.map(w => 
-      <a onClick={() => dictionary(w)}>  {w}  </a>
-    );
-  }
-
   return (
     <div className={styles.container}>
     <div className="App font-serif text-justify">
-      {clickableWords()}
+      {clickableWords(par)}
     </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Navbar from './navbar';
 
 function Word (props) {
     

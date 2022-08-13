@@ -8,6 +8,8 @@ import Navbar from './components/navbar'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import '../styles/popup2.css'
+import SwitchTheme from './components/themeswitch'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -21,11 +23,11 @@ const toggleTheme = () => {
 const{ locale, locales, asPath} = useRouter()
 
 return (
+  <div className={styles.background}>
   <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
     <GlobalStyles />
-    <button onClick={toggleTheme}>Switch Theme</button>
-    <div className="">
-        <div className="">
+    <div className="font-serif">
+        <div className={styles.container}>
           {locales?.map((l, i) => {
             return (
               <span key={i} className={l === locale ? styles.selected : ''}>
@@ -37,14 +39,21 @@ return (
           })}
         </div>
     </div>
-    <div>{Data.main_data
+    <div className='font-serif'>{Data.main_data
               .filter(p => p.locale === locale)
-              .map((navbarsets, i) => {
-              return <Navbar key={i} navbarsets={navbarsets}/>;
+              .map(({menu, settings, search, themeswitch}, i) => {
+              return <Navbar key={i} menu={menu} settings={settings} search={search} themeswitch={themeswitch} toggleTheme={toggleTheme}/>;
               })}
     </div>
+    {/*<div className='font-serif'>{Data.main_data
+              .filter(p => p.locale === locale)
+              .map((themesets, i) => {
+              return <SwitchTheme key={i} themesets={themesets}/>;
+              })}
+            </div>*/}
     <Component {...pageProps} />
   </ThemeProvider>
+  </div>
 )
 }
 

@@ -1,4 +1,4 @@
-import { connectToDatabase } from "../../util_file";
+import { connectToDatabase } from "../../util/mongodb";
 
 export default async (req, res) => {
   const { db } = await connectToDatabase();

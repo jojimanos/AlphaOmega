@@ -1,16 +1,20 @@
 import { connectToDatabase } from "../util/mongodb";
+import jsxToString from 'jsx-to-string'
+import styles from '../styles/Home.module.css'
+import clickableWords from "./components/cickableWords"
 
 export default function Par2({ newtest }) {
+  const para = 
+  
+  <div>{newtest.map((x) => (<li key={x.chap}><h2>{x.chap}</h2></li>))}</div>
+
+  const par = jsxToString(para)
+
   return (
-    <div>
-      <h1></h1>
-      <div>
-        {newtest.map((x) => (
-          <li>
-            <h2>{x.chap}</h2>
-          </li>
-        ))}
-      </div>
+    <div className={styles.container}>
+    <div className="App font-serif text-justify">
+      {clickableWords(par)}
+    </div>
     </div>
   );
 }

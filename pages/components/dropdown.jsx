@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import styles from "../../styles/Home.module.css";
 
 class Dropdown extends Component {
 
@@ -12,6 +13,10 @@ class Dropdown extends Component {
           };
         });
       };
+
+      toggleIt = () => {
+        this.props.toggleIt()
+      }
   
     render() {
       return (
@@ -51,7 +56,7 @@ class Dropdown extends Component {
               hover:bg-gray-100
             "
             href="#">
-              <button>Action</button></a></li>
+              <button className={styles.container} onClick={()=>this.toggleIt()}>{this.props.themeswitch}</button></a></li>
                   <li><a class="
               dropdown-item
               text-sm

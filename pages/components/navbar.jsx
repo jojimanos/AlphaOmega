@@ -15,7 +15,7 @@ function Navbar (props) {
             </div>
             <div className="sm:grid grid-cols-3">
             <button className={styles.container} onClick={()=>props.toggleTheme()}>{props.themeswitch}</button>
-            <Dropdown settings={props.settings}/>
+            <Dropdown settings={props.settings} themeswitch={props.themeswitch} toggleIt={()=>props.toggleTheme()} />
             <p className="sm:text-center">
                 
                 <input type="text" placeholder={props.search}/>

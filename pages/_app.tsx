@@ -10,6 +10,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import '../styles/popup2.css'
 import SwitchTheme from './components/themeswitch'
+import Footer from './components/footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -52,6 +53,12 @@ return (
               })}
             </div>*/}
     <Component {...pageProps} />
+    <div className='font-serif'>{Data.main_data
+              .filter(p => p.locale === locale)
+              .map(({powered}, i) => {
+              return <Footer key={i} powered={powered}/>;
+              })}
+    </div>
   </ThemeProvider>
   </div>
 )

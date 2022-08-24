@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-
 function Gosp_tem(props) {
   const { gospsets } = props;
 

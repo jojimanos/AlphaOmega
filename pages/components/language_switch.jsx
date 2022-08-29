@@ -1,17 +1,20 @@
 import styles from "../../styles/Home.module.css";
+import Link from "next/link";
 
-export default function LanguageSwitch(){
+export default function LanguageSwitch(props) {
+  return(
 <div className="font-serif">
   <div className={styles.container}>
-    {locales?.map((l, i) => {
+    {props.locales?.map((l, i) => {
       return (
-        <span key={i} className={l === locale ? styles.selected : ""}>
-          <Link href={asPath} locale={l}>
-            {l}
+        <span key={i} className={l === props.locale ? styles.selected : ""}>
+          <Link href={props.asPath} locale={l}>
+           {l}
           </Link>
         </span>
       );
     })}
   </div>
-</div>;
+</div>
+)
 }

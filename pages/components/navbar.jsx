@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Dropdown from './dropdown'
 import styles from '../../styles/Home.module.css'
+import LanguageSwitch from "./language_switch";
 
 function Navbar (props) {
         
@@ -13,6 +14,7 @@ function Navbar (props) {
                 </Link>
             </p>
             </div>
+            <LanguageSwitch locales={props.locales} locale={props.locale} asPath={props.asPath}/>
             <div className="sm:grid grid-cols-3">
             <button className={styles.container} onClick={()=>props.toggleTheme()}>{props.themeswitch}</button>
             <Dropdown settings={props.settings} themeswitch={props.themeswitch} toggleIt={()=>props.toggleTheme()} />

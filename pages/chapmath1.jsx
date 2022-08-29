@@ -6,7 +6,7 @@ import clickableWords from "./components/cickableWords"
 export default function Par2({ newtest }) {
   const para = 
   
-  <div>{newtest.map((x) => (<li key={x.chap}><h2>{x.chap}</h2></li>))}</div>
+  <div>{newtest.map((x) => (<li key={x.chap_1}><h2>{x.chap_1}</h2></li>))}</div>
 
   const par = jsxToString(para)
 

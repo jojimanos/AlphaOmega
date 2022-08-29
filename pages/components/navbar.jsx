@@ -25,8 +25,8 @@ function Navbar (props) {
             </p>
             </div>
       </div>
-      </div>
-      );
-    }
- 
+    </div>
+  );
+}
+
 export default Navbar;

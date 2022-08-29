@@ -1,16 +1,14 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import styles from '../styles/Home.module.css'
-import Navbar from './components/navbar'
-import Data from './assets/main_data.json'
-import Main_tem from "./components/main_tem"
-import fetch from 'isomorphic-unfetch'
-
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import styles from "../styles/Home.module.css";
+import Navbar from "./components/navbar";
+import Data from "./assets/main_data.json";
+import Main_tem from "./components/main_tem";
+import fetch from "isomorphic-unfetch";
 
 const Home: NextPage = () => {
-
-  const{ locale, locales, asPath} = useRouter()
+  const { locale, locales, asPath } = useRouter();
 
   return (
     <div className={styles.container}>
@@ -20,15 +18,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>{Data.main_data
-                .filter(p => p.locale === locale)
-                .map((mainsets, i) => {
-                return <Main_tem key={i} mainsets={mainsets}/>;
-                })}
+      <div>
+        {Data.main_data
+          .filter((p) => p.locale === locale)
+          .map((mainsets, i) => {
+            return <Main_tem key={i} mainsets={mainsets} />;
+          })}
       </div>
-      </div>
+    </div>
+  );
+};
 
-        )
-}
-
-export default Home
+export default Home;

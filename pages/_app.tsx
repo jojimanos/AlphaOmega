@@ -14,9 +14,13 @@ import Footer from './components/footer'
 import LanguageSwitch from './components/language_switch'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [theme, setTheme] = useState("light");
 
+  const toggleTheme = () => {
+    theme == "light" ? setTheme("dark") : setTheme("light");
+  };
 
-const [theme, setTheme] = useState('light')
+  const { locale, locales, asPath } = useRouter();
 
 const toggleTheme = () => {
   theme == 'light' ? setTheme('dark') : setTheme('light')
@@ -35,21 +39,23 @@ return (
               })}
     </div>
     {/*<div className='font-serif'>{Data.main_data
+
               .filter(p => p.locale === locale)
               .map((themesets, i) => {
               return <SwitchTheme key={i} themesets={themesets}/>;
               })}
             </div>*/}
-    <Component {...pageProps} />
-    <div className='font-serif'>{Data.main_data
-              .filter(p => p.locale === locale)
-              .map(({powered}, i) => {
-              return <Footer key={i} powered={powered}/>;
-              })}
+        <Component {...pageProps} />
+        <div className="font-serif">
+          {Data.main_data
+            .filter((p) => p.locale === locale)
+            .map(({ powered }, i) => {
+              return <Footer key={i} powered={powered} />;
+            })}
+        </div>
+      </ThemeProvider>
     </div>
-  </ThemeProvider>
-  </div>
-)
+  );
 }
 
-export default MyApp
+export default MyApp;

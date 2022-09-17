@@ -22,12 +22,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const { locale, locales, asPath } = useRouter();
 
-const toggleTheme = () => {
-  theme == 'light' ? setTheme('dark') : setTheme('light')
-}
-
-const{ locale, locales, asPath} = useRouter()
-
 return (
   <div className={styles.background}>
   <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>

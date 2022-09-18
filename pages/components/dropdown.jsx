@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "../../styles/Home.module.css";
 
 function Dropdown(props) {
@@ -7,12 +7,27 @@ function Dropdown(props) {
   const [open, setOpen] = useState(false)
   const handleButtonClick = () => setOpen(!open)
 
+  useEffect(() => {
+    const pageClickEvent = (e) => {
+      if (dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) {
+        setOpen(!open)
+      }
+    }
+    if (open) {
+      window.addEventListener('click', pageClickEvent)
+    }
+    return () => {
+      window.removeEventListener('click', pageClickEvent)
+    }
+  },
+    [open])
+
   const toggleIt = () => {
     props.toggleIt()
   }
 
   return (
-    <p className="dropdown">
+    <p ref={dropdownRef} className="dropdown">
       <button className="
           dropdown-toggle
           leading-tight
@@ -32,8 +47,9 @@ function Dropdown(props) {
         aria-expanded="false" onClick={handleButtonClick}>
         {props.settings}
       </button>
-      {open &&(
-          <ul>
+      <nav>
+      {open && (
+        <ul>
           <li><a class="
               dropdown-item
               text-sm
@@ -80,6 +96,7 @@ function Dropdown(props) {
             href="#">Something else here</a></li>
         </ul>
       )}
+      </nav>
     </p>
   );
 }

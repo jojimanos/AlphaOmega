@@ -6,12 +6,10 @@ import { lightTheme, darkTheme, GlobalStyles } from "./ThemeConfig"
 import Data from "./assets/main_data.json"
 import Navbar from './components/navbar'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import '../styles/popup2.css'
-import SwitchTheme from './components/themeswitch'
 import Footer from './components/footer'
-import LanguageSwitch from './components/language_switch'
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState("light");
@@ -32,13 +30,6 @@ return (
               return <Navbar key={i} menu={menu} settings={settings} search={search} themeswitch={themeswitch} toggleTheme={toggleTheme} locales={locales} locale={locale} asPath={asPath}/>;
               })}
     </div>
-    {/*<div className='font-serif'>{Data.main_data
-
-              .filter(p => p.locale === locale)
-              .map((themesets, i) => {
-              return <SwitchTheme key={i} themesets={themesets}/>;
-              })}
-            </div>*/}
         <Component {...pageProps} />
         <div className="font-serif">
           {Data.main_data

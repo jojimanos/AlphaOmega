@@ -3,7 +3,7 @@ import Dropdown from './dropdown'
 import styles from '../../styles/Home.module.css'
 import LanguageSwitch from "./language_switch";
 
-function Navbar (props) {
+function Navbar (props: any): JSX.Element {
         
         return (
             <div className={styles.container}>

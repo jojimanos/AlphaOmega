@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Chapmath_tem from ".//components/chap_tem";
+import Chapmath_tem from "./components/chap_tem";
 import Data from "./assets/chap_data.json";
 import { useRouter } from "next/router";
 
-function ChapMath() {
+function ChapMath(): JSX.Element {
   const { locale, locales, asPath } = useRouter();
 
   return (

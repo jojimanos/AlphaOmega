@@ -1,9 +1,7 @@
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
-import Image from "next/image";
-import Footer from "./footer";
 
-function Main_tem(props) {
+function Main_tem(props: any): JSX.Element {
   const { mainsets } = props;
 
   const {
@@ -18,22 +16,22 @@ function Main_tem(props) {
   return (
     <div>
       <main className={styles.main}>
-        <h1 className={styles.title}>{main_title}</h1>
+        <h1 className={styles.title}>{main_title as string}</h1>
 
-        <p className={styles.description}>{description}</p>
+        <p className={styles.description}>{description as string}</p>
 
         <div className={styles.grid}>
           <Link href={"/"}>
             <a className={styles.card}>
-              <h2>{OldTest} &rarr;</h2>
-              <p>{Old_description}</p>
+              <h2>{OldTest as string} &rarr;</h2>
+              <p>{Old_description as string}</p>
             </a>
           </Link>
 
           <Link href={"/gosp"}>
             <a className={styles.card}>
-              <h2>{NewTest} &rarr;</h2>
-              <p>{New_description}</p>
+              <h2>{NewTest as string} &rarr;</h2>
+              <p>{New_description as string}</p>
             </a>
           </Link>
         </div>

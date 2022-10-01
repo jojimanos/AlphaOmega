@@ -1,8 +1,7 @@
-import React, { Component } from "react";
 import styles from "../../styles/Home.module.css";
 import Image from "next/image";
 
-export default function Footer(props) {
+export default function Footer(props: any) {
   return (
     <footer className={styles.footer}>
       <a>

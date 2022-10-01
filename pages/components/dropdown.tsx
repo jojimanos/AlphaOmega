@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "../../styles/Home.module.css";
 
-function Dropdown(props) {
+function Dropdown(props: any) {
 
-  const dropdownRef = useRef(null)
-  const [open, setOpen] = useState(false)
+  const dropdownRef = useRef<any>(null)
+  const [open, setOpen] = useState<boolean>(false)
   const handleButtonClick = () => setOpen(!open)
 
   useEffect(() => {
-    const pageClickEvent = (e) => {
+    const pageClickEvent = (e: any) => {
       if (dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) {
         setOpen(!open)
       }
@@ -48,9 +48,9 @@ function Dropdown(props) {
         {props.settings}
       </button>
       <nav>
-      {open && (
-        <ul>
-          <li><a class="
+        {open && (
+          <ul>
+            <li><a className="
               dropdown-item
               text-sm
               py-2
@@ -63,9 +63,9 @@ function Dropdown(props) {
               text-gray-700
               hover:bg-gray-100
             "
-            href="#">
-            <button className={styles.container} onClick={() => toggleIt()}>{props.themeswitch}</button></a></li>
-          <li><a class="
+              href="#">
+              <button className={styles.container} onClick={() => toggleIt()}>{props.themeswitch}</button></a></li>
+            <li><a className="
               dropdown-item
               text-sm
               py-2
@@ -78,9 +78,9 @@ function Dropdown(props) {
               text-gray-700
               hover:bg-gray-100
             "
-            href="#">Another action</a></li>
-          <li><hr /></li>
-          <li><a class="
+              href="#">Another action</a></li>
+            <li><hr /></li>
+            <li><a className="
               dropdown-item
               text-sm
               py-2
@@ -93,9 +93,9 @@ function Dropdown(props) {
               text-gray-700
               hover:bg-gray-100
             "
-            href="#">Something else here</a></li>
-        </ul>
-      )}
+              href="#">Something else here</a></li>
+          </ul>
+        )}
       </nav>
     </p>
   );

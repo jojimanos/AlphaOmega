@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Gosp_tem from ".//components/gosp_tem";
+import Gosp_tem from "./components/gosp_tem";
 import Data from "./assets/gosp_data.json";
 import { useRouter } from "next/router";
 
-function Gosp() {
+function Gosp(): JSX.Element {
   const { locale, locales, asPath } = useRouter();
 
   return (

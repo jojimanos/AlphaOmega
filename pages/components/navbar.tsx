@@ -10,7 +10,7 @@ function Navbar (props: any): JSX.Element {
             <div className="sm:grid grid-cols-2 text-1xl pb-5 pt-1">
             <div><p className="sm:text-left">
                 <Link href="/">
-                    <a className="">{props.menu}</a>
+                    {props.menu}
                 </Link>
             </p>
             </div>

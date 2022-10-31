@@ -22,17 +22,17 @@ function Main_tem(props: any): JSX.Element {
 
         <div className={styles.grid}>
           <Link href={"/"}>
-            <a className={styles.card}>
+            <div className={styles.card}>
               <h2>{OldTest as string} &rarr;</h2>
               <p>{Old_description as string}</p>
-            </a>
+            </div>
           </Link>
 
           <Link href={"/gosp"}>
-            <a className={styles.card}>
+            <div className={styles.card}>
               <h2>{NewTest as string} &rarr;</h2>
               <p>{New_description as string}</p>
-            </a>
+            </div>
           </Link>
         </div>
       </main>

@@ -1,14 +1,31 @@
+import myJson from "../assets/bible_names.json"
+
 export default function clickableWords(props: any): JSX.Element[] {
+
+  const incoming = JSON.stringify(myJson)
+
+  const parsed = JSON.parse(incoming)
+
+  const bibleNames = Object.values(parsed)
+
   function dictionary(w: string) {
     let link1 = "http://www.perseus.tufts.edu/hopper/morph?l=";
     let link2 = "&la=greek";
     let link = link1 + w + link2;
     open(link);
+    console.log(bibleNames)
+  }
+
+  function wikipedia(w: string) {
+    let link1 = "https://biblicaltext.com/dictionary/"
+    let link = link1 + w
+    open(link);
   }
 
   const arr = Array.from(props);
   const string: string = arr.join("");
-  const string2: string = string.slice(17);
-  const words: string[] = string2.split(/ /g);
-  return words.map((w) => <a onClick={() => dictionary(w)}> {w} </a>)
+  const string2: string = string.slice(21); //Removes the starting tags from text
+  const string3: string = string2.slice(0,-21); 
+  const words: string[] = string3.split(/ /g); //Splits words
+  return words.map((w) => <a className="hover:text-blue-700 hover:underline" onClick={() => { if (bibleNames.includes(w.replace(/[,.]/g, ''))) { wikipedia(w.replace(/[.,]/g, '')) } else { dictionary(w.replace(/[.,]/g, '')) } }}> {w} </a>)
 }

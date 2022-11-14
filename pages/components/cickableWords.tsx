@@ -27,5 +27,5 @@ export default function clickableWords(props: any): JSX.Element[] {
   const string2: string = string.slice(21); //Removes the starting tags from text
   const string3: string = string2.slice(0,-21); 
   const words: string[] = string3.split(/ /g); //Splits words
-  return words.map((w) => <a className="hover:text-blue-700 hover:underline" onClick={() => { if (bibleNames.includes(w.replace(/[,.]/g, ''))) { wikipedia(w.replace(/[.,]/g, '')) } else { dictionary(w.replace(/[.,]/g, '')) } }}> {w} </a>)
+  return words.map((w) => <a><button className="hover:text-blue-700 hover:underline" onClick={() => { if (bibleNames.includes(w.replace(/[,.]/g, ''))) { wikipedia(w.replace(/[.,]/g, '')) } else { dictionary(w.replace(/[.,]/g, '')) } }}> {w} </button> </a>)
 }

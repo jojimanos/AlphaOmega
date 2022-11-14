@@ -1,8 +1,8 @@
 import { connectToDatabase } from "../util/mongodb";
-import jsxToString from "jsx-to-string";
 import styles from "../styles/Home.module.css";
 import clickableWords from "./components/cickableWords";
 import { useState } from "react";
+import htmlToString from "./components/htmlToString";
 
 export default function Par2({ newtest }) {
 
@@ -15,13 +15,13 @@ export default function Par2({ newtest }) {
 
     <p>{newtest.map((x) => (<li><h2>{x.chap_1}</h2></li>))}</p>
 
-  const par = jsxToString(para);
+  const par = htmlToString(para);
 
   const chapter_2 =
 
     <div>{newtest.map((x) => (<li><h2>{x.chap_2}</h2></li>))}</div>
 
-  const par2 = jsxToString(chapter_2);
+  const par2 = htmlToString(chapter_2);
 
   return (
     <div className={styles.container}>

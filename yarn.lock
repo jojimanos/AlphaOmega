@@ -2023,6 +2023,16 @@
     "@hapi/cryptiles" "5.x.x"
     "@hapi/hoek" "9.x.x"
 
+"hawk@~0.10.2":
+  "integrity" "sha512-BjpmnZ95odv7KOIsydfNTAxfGOGaVc6xbYL4fozWl45PWjDqskix0LHAekmGkpnrCAI6+AZRvJIXNTAllj+e6w=="
+  "resolved" "https://registry.npmjs.org/hawk/-/hawk-0.10.2.tgz"
+  "version" "0.10.2"
+  dependencies:
+    "boom" "0.3.x"
+    "cryptiles" "0.1.x"
+    "hoek" "0.7.x"
+    "sntp" "0.1.x"
+
 "hbo-dnsd@0.9.8":
   "integrity" "sha512-mIj4V7OicuAlnSfvTXopd401Ba7eFFSL2L3EmM1NqlIWe1pJ/x9dyHqfnKXnJr5qSbNFLnadXvwNd3kURNy+ug=="
   "resolved" "https://registry.npmjs.org/hbo-dnsd/-/hbo-dnsd-0.9.8.tgz"

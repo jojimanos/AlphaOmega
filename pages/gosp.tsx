@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Gosp_tem from "./components/gosp_tem";
+import Gosp_tem from "./components/pageTemplates/gospelListTemplate";
 import Data from "./assets/gosp_data.json";
 import { useRouter } from "next/router";
 

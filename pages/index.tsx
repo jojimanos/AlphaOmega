@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
-import Navbar from "./components/navbar";
+import Navbar from "./components/navbarAndFooterComponents/navbar";
 import Data from "./assets/main_data.json";
-import Main_tem from "./components/main_tem";
+import Main_tem from "./components/pageTemplates/mainPageTemplate";
 import fetch from "isomorphic-unfetch";
 
 const Home: NextPage = () => {

@@ -5,5 +5,5 @@ const nextConfig = {
 
 module.exports = {nextConfig,
   i18n:{
-  locales: ["English", "Espagnol", "it-IT", "Greek"],
+  locales: ["English", "Espagnol", "Italian", "Greek"],
   defaultLocale: "English"}}

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from "../../styles/Home.module.css";
+import styles from "../../../styles/Home.module.css";
 
 function Dropdown(props: any) {
 

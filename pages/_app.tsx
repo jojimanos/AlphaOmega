@@ -4,11 +4,11 @@ import {ThemeProvider} from "styled-components"
 import { useState } from 'react'
 import { lightTheme, darkTheme, GlobalStyles } from "./ThemeConfig"
 import Data from "./assets/main_data.json"
-import Navbar from './components/navbar'
+import Navbar from './components/navbarAndFooterComponents/navbar'
 import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import '../styles/popup2.css'
-import Footer from './components/footer'
+import Footer from './components/navbarAndFooterComponents/footer'
 
 
 function MyApp({ Component, pageProps }: AppProps) {

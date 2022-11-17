@@ -9,7 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hapi/boom": "^10.0.0",
+    "@hapi/cryptiles": "^6.0.0",
     "@hapi/hawk": "^8.0.0",
+    "@hapi/hoek": "^10.0.1",
+    "@hapi/sntp": "^4.0.0",
+    "@hapi/teamwork": "^6.0.0",
     "@popperjs/core": "^2.11.5",
     "@reduxjs/toolkit": "^1.8.3",
     "classnames": "^2.3.1",
@@ -31,7 +36,8 @@
     "react-router-dom": "^6.3.0",
     "reactjs-popup": "^2.0.5",
     "styled": "^1.0.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "17.0.39",

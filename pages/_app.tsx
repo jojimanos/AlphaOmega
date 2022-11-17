@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import {ThemeProvider} from "styled-components"
 import { useState } from 'react'
-import { lightTheme, darkTheme, GlobalStyles } from "./ThemeConfig"
+import { lightTheme, darkTheme, GlobalStyles } from "../styles/ThemeConfig"
 import Data from "./assets/main_data.json"
 import Navbar from './components/navbarAndFooterComponents/navbar'
 import { useRouter } from 'next/router'

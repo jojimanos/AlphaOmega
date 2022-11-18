@@ -5,6 +5,7 @@ import htmlText from "../components/htmlText";
 import htmlEnglishText from "../components/htmlEnglishText"
 import paragraphTemplate from "../components/paragraph_template";
 import { useState } from "react";
+import JSXStyle from "styled-jsx/style";
 
 export default function Chapter1({ newtest }: any) {
 
@@ -95,31 +96,31 @@ export default function Chapter1({ newtest }: any) {
   const htmlEnglishParagraph24 = htmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 24 })
   const htmlEnglishParagraph25 = htmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 25 })
 
-  const stringParagraph1 = htmlToString(htmlParagraph1);
-  const stringParagraph2 = htmlToString(htmlParagraph2);
-  const stringParagraph3 = htmlToString(htmlParagraph3);
-  const stringParagraph4 = htmlToString(htmlParagraph4);
-  const stringParagraph5 = htmlToString(htmlParagraph5);
-  const stringParagraph6 = htmlToString(htmlParagraph6);
-  const stringParagraph7 = htmlToString(htmlParagraph7);
-  const stringParagraph8 = htmlToString(htmlParagraph8);
-  const stringParagraph9 = htmlToString(htmlParagraph9);
-  const stringParagraph10 = htmlToString(htmlParagraph10);
-  const stringParagraph11 = htmlToString(htmlParagraph11);
-  const stringParagraph12 = htmlToString(htmlParagraph12);
-  const stringParagraph13 = htmlToString(htmlParagraph13);
-  const stringParagraph14 = htmlToString(htmlParagraph14);
-  const stringParagraph15 = htmlToString(htmlParagraph15);
-  const stringParagraph16 = htmlToString(htmlParagraph16);
-  const stringParagraph17 = htmlToString(htmlParagraph17);
-  const stringParagraph18 = htmlToString(htmlParagraph18);
-  const stringParagraph19 = htmlToString(htmlParagraph19);
-  const stringParagraph20 = htmlToString(htmlParagraph20);
-  const stringParagraph21 = htmlToString(htmlParagraph21);
-  const stringParagraph22 = htmlToString(htmlParagraph22);
-  const stringParagraph23 = htmlToString(htmlParagraph23);
-  const stringParagraph24 = htmlToString(htmlParagraph24);
-  const stringParagraph25 = htmlToString(htmlParagraph25);
+  const stringParagraph1 = htmlToString(htmlParagraph1 as JSX.Element);
+  const stringParagraph2 = htmlToString(htmlParagraph2 as JSX.Element);
+  const stringParagraph3 = htmlToString(htmlParagraph3 as JSX.Element);
+  const stringParagraph4 = htmlToString(htmlParagraph4 as JSX.Element);
+  const stringParagraph5 = htmlToString(htmlParagraph5 as JSX.Element);
+  const stringParagraph6 = htmlToString(htmlParagraph6 as JSX.Element);
+  const stringParagraph7 = htmlToString(htmlParagraph7 as JSX.Element);
+  const stringParagraph8 = htmlToString(htmlParagraph8 as JSX.Element);
+  const stringParagraph9 = htmlToString(htmlParagraph9 as JSX.Element);
+  const stringParagraph10 = htmlToString(htmlParagraph10 as JSX.Element);
+  const stringParagraph11 = htmlToString(htmlParagraph11 as JSX.Element);
+  const stringParagraph12 = htmlToString(htmlParagraph12 as JSX.Element);
+  const stringParagraph13 = htmlToString(htmlParagraph13 as JSX.Element);
+  const stringParagraph14 = htmlToString(htmlParagraph14 as JSX.Element);
+  const stringParagraph15 = htmlToString(htmlParagraph15 as JSX.Element);
+  const stringParagraph16 = htmlToString(htmlParagraph16 as JSX.Element);
+  const stringParagraph17 = htmlToString(htmlParagraph17 as JSX.Element);
+  const stringParagraph18 = htmlToString(htmlParagraph18 as JSX.Element);
+  const stringParagraph19 = htmlToString(htmlParagraph19 as JSX.Element);
+  const stringParagraph20 = htmlToString(htmlParagraph20 as JSX.Element);
+  const stringParagraph21 = htmlToString(htmlParagraph21 as JSX.Element);
+  const stringParagraph22 = htmlToString(htmlParagraph22 as JSX.Element);
+  const stringParagraph23 = htmlToString(htmlParagraph23 as JSX.Element);
+  const stringParagraph24 = htmlToString(htmlParagraph24 as JSX.Element);
+  const stringParagraph25 = htmlToString(htmlParagraph25 as JSX.Element);
 
   const stringEnglishParagraph1 = htmlToString(htmlEnglishParagraph1);
   const stringEnglishParagraph2 = htmlToString(htmlEnglishParagraph2);

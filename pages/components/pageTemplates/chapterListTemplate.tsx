@@ -16,9 +16,9 @@ function Chapmath_tem(props: any): JSX.Element {
 
   return (
     <div className="text-center m-3 font-serif">
-      <Link href={link_1 as string}>
+      <Link href={chapsets?.[link_1 as string]}>
         <div>
-          <p className="text-3xl whitespace-pre py-2">1 {title_1 as string}</p>
+          <p className="text-3xl whitespace-pre py-2">1 {chapsets?.[title_1 as string]}</p>
         </div>
       </Link>
       <Link href={link_2 as string}>

@@ -2,7 +2,7 @@ import styles from "../../../styles/Home.module.css";
 import Link from "next/link";
 
 function Main_tem(props: { mainsets: any; }): JSX.Element {
-  const { mainsets } = props;
+  const { mainsets } = props || {};
 
   const {
     main_title,

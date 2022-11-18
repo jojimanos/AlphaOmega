@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 function Chapmath_tem(props: any): JSX.Element {
-  const { chapsets } = props;
+  const { chapsets } = props || {};
 
   const {
     title_1,

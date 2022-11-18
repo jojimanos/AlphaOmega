@@ -4,7 +4,7 @@ import Data from "./assets/gosp_data.json";
 import { useRouter } from "next/router";
 
 function Gosp(): JSX.Element {
-  const { locale, locales, asPath } = useRouter();
+  const { locale, locales, asPath } = useRouter() || {};
 
   return (
     <div>

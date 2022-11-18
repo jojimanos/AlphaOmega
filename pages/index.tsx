@@ -8,7 +8,7 @@ import Main_tem from "./components/pageTemplates/mainPageTemplate";
 import fetch from "isomorphic-unfetch";
 
 const Home: NextPage = () => {
-  const { locale, locales, asPath } = useRouter();
+  const { locale, locales, asPath } = useRouter() || {};
 
   return (
     <div className={styles.container}>

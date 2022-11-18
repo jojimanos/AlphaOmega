@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     theme == "light" ? setTheme("dark") : setTheme("light");
   };
 
-  const { locale, locales, asPath } = useRouter();
+  const { locale, locales, asPath } = useRouter() || {};
 
 return (
   <div className={styles.background}>

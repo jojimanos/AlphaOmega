@@ -4,7 +4,7 @@ import Data from "./assets/chap_data.json";
 import { useRouter } from "next/router";
 
 function ChapMath(): JSX.Element {
-  const { locale, locales, asPath } = useRouter();
+  const { locale, locales, asPath } = useRouter() || {};
 
   return (
     <div className="font-serif">

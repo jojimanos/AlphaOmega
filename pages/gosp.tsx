@@ -10,7 +10,7 @@ function Gosp(): JSX.Element {
     <div>
       {Data.gosp_data
         .filter((p) => p.locale === locale)
-        ?.map((gospsets, i) => {
+        .map((gospsets, i) => {
           return <Gosp_tem key={i} gospsets={gospsets} />;
         })}
     </div>

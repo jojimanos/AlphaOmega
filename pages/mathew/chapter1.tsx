@@ -6,7 +6,7 @@ import htmlEnglishText from "../components/htmlEnglishText"
 import paragraphTemplate from "../components/paragraph_template";
 import { useState } from "react";
 
-export default function Chapter1({ newtest }) {
+export default function Chapter1({ newtest }: any) {
 
   const [englishText, setEnglishText] = useState(false)
 

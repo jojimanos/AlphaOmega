@@ -24,8 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/components/dropdown.tsx",
-    "pages/mathew/chapter1.jsx"
-, "pages/components/htmlText.jsx", "pages/components/htmlToString.jsx", "pages/components/paragraph_template.jsx"  ],
+    "pages/mathew/chapter1.tsx"
+, "pages/components/htmlText.tsx", "pages/components/htmlToString.tsx", "pages/components/paragraph_template.jsx"  ],
   "exclude": [
     "node_modules"
   ]

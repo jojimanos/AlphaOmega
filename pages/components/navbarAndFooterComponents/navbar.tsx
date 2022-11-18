@@ -9,7 +9,7 @@ function Navbar(props: any): JSX.Element {
         <div className={styles.container}>
             <div className="sm:grid grid-cols-4 text-1xl pb-5 pt-1">
                 <div><p className="sm:text-left">
-                    <Link href="/">
+                    <Link href={"/" ?? ''}>
                         {props.menu}
                     </Link>
                 </p>

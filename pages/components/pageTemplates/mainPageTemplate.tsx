@@ -21,14 +21,14 @@ function Main_tem(props: { mainsets: any; }): JSX.Element {
         <p className={styles.description}>{description as string}</p>
 
         <div className={styles.grid}>
-          <Link href={"/"}>
+          <Link href={"/" ?? ''}>
             <div className={styles.card}>
               <h2>{OldTest as string} &rarr;</h2>
               <p>{Old_description as string}</p>
             </div>
           </Link>
 
-          <Link href={"/gosp"}>
+          <Link href={"/gosp" ?? ''}>
             <div className={styles.card}>
               <h2>{NewTest as string} &rarr;</h2>
               <p>{New_description as string}</p>

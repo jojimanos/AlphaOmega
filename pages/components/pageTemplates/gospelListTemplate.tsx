@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-function Gosp_tem(props: any): JSX.Element {
+function Gosp_tem(props: {gospsets: any}): JSX.Element {
   const { gospsets } = props;
 
   const { title_1, title_2, title_3, title_4, link_1, link_2, link_3, link_4 } =

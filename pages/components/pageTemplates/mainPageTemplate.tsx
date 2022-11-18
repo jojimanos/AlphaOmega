@@ -1,7 +1,7 @@
 import styles from "../../../styles/Home.module.css";
 import Link from "next/link";
 
-function Main_tem(props: any): JSX.Element {
+function Main_tem(props: { mainsets: any; }): JSX.Element {
   const { mainsets } = props;
 
   const {

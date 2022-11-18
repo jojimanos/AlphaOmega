@@ -39,9 +39,9 @@ export default function Chapter1({ newtest }: any) {
   const buttonText25 = "Paragraph 25"
 
 
-  const author = "mathew"
-  const authorEnglish = "mathew_english"
-  const chapter = "chapter_1"
+  const author: string = "mathew"
+  const authorEnglish: string = "mathew_english"
+  const chapter: string = "chapter_1"
 
   const htmlParagraph1 = htmlText({ newtest }, { author, chapter, paragraph: 1 })
   const htmlParagraph2 = htmlText({ newtest }, { author, chapter, paragraph: 2 })

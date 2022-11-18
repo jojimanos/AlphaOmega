@@ -12,7 +12,7 @@ function Chapmath_tem(props: any): JSX.Element {
     title_6,
     link_1,
     link_2,
-  } = chapsets;
+  } = chapsets || {};
 
   return (
     <div className="text-center m-3 font-serif">

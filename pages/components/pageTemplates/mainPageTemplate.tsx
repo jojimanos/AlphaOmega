@@ -11,7 +11,7 @@ function Main_tem(props: { mainsets: any; }): JSX.Element {
     NewTest,
     Old_description,
     New_description,
-  } = mainsets;
+  } = mainsets || {};
 
   return (
     <div>

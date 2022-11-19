@@ -154,7 +154,7 @@ export default function Chapter1({ newtest }: any) {
   const stringEnglishParagraph25 = htmlToString(htmlEnglishParagraph25);
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
         <button onClick={() => { setEnglishText(!englishText) }}>English Text</button>
         <div>{paragraphTemplate(stringParagraph1, stringEnglishParagraph1, buttonText1, englishText)}</div>

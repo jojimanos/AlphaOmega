@@ -5,7 +5,6 @@ import htmlText from "../components/htmlText";
 import htmlEnglishText from "../components/htmlEnglishText"
 import paragraphTemplate from "../components/paragraph_template";
 import { useState } from "react";
-import JSXStyle from "styled-jsx/style";
 
 export default function Chapter1({ newtest }: any) {
 

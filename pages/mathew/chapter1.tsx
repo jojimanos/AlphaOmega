@@ -1,16 +1,22 @@
 import { connectToDatabase } from "../../util/mongodb";
 import styles from "../../styles/Home.module.css";
-import htmlToString from "../components/htmlToString";
 import htmlText from "../components/htmlText";
 import htmlEnglishText from "../components/htmlEnglishText"
 import paragraphTemplate from "../components/paragraph_template";
 import { useState } from "react";
+import reactElementToJSXString from "react-element-to-jsx-string";
+
 
 export default function Chapter1({ newtest }: any) {
 
   const [englishText, setEnglishText] = useState(false)
 
-  function englishTextAppear() { setEnglishText(!englishText) }
+  function htmlToString(props: JSX.Element): string {
+    let text
+    return (text = reactElementToJSXString(props))
+}
+
+  //function englishTextAppear() { setEnglishText(!englishText) }
 
   const buttonText1 = "Paragraph 1"
   const buttonText2 = "Paragraph 2"

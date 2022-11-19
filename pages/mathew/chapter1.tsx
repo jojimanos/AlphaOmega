@@ -155,7 +155,6 @@ export default function Chapter1({ newtest }: any) {
 
   return (
     <div className={styles.container}>
-      <div>
         <button onClick={() => { setEnglishText(!englishText) }}>English Text</button>
         <div>{paragraphTemplate(stringParagraph1, stringEnglishParagraph1, buttonText1, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph2, stringEnglishParagraph2, buttonText2, englishText)}</div>
@@ -182,7 +181,6 @@ export default function Chapter1({ newtest }: any) {
         <div>{paragraphTemplate(stringParagraph23, stringEnglishParagraph23, buttonText23, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph24, stringEnglishParagraph24, buttonText24, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph25, stringEnglishParagraph25, buttonText25, englishText)}</div>
-      </div>
     </div>
   );
 }

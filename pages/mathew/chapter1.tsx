@@ -101,7 +101,7 @@ export default function Chapter1({ newtest }: any) {
   const htmlEnglishParagraph24 = htmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 24 })
   const htmlEnglishParagraph25 = htmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 25 })
 
-  const stringParagraph1 = htmlToString(htmlParagraph1 as JSX.Element);
+  const stringParagraph1 = htmlToString(htmlParagraph1);
   const stringParagraph2 = htmlToString(htmlParagraph2 as JSX.Element);
   const stringParagraph3 = htmlToString(htmlParagraph3 as JSX.Element);
   const stringParagraph4 = htmlToString(htmlParagraph4 as JSX.Element);

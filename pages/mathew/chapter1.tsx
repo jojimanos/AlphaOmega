@@ -8,10 +8,6 @@ import reactElementToJSXString from "react-element-to-jsx-string";
 
 
 export default function Chapter1({ newtest }: any) {
-  
-  let newtest2: any
-
-  newtest2 = {newtest}
 
   const [englishText, setEnglishText] = useState(false)
 
@@ -53,7 +49,7 @@ export default function Chapter1({ newtest }: any) {
   const authorEnglish: string = "mathew_english"
   const chapter: string = "chapter_1"
 
-  const htmlParagraph1 = htmlText( newtest2 , { author, chapter, paragraph: 1 })
+  const htmlParagraph1 = htmlText({ newtest }, { author, chapter, paragraph: 1 })
   const htmlParagraph2 = htmlText({ newtest }, { author, chapter, paragraph: 2 })
   const htmlParagraph3 = htmlText({ newtest }, { author, chapter, paragraph: 3 })
   const htmlParagraph4 = htmlText({ newtest }, { author, chapter, paragraph: 4 })

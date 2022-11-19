@@ -1,11 +1,11 @@
 import { useState } from "react"
 import clickableWords from "./clickableWords"
 
-export default function paragraphTemplate(stringParagraph, stringEnglishParagraph, buttonText, englishText) {
+export default function paragraphTemplate(stringParagraph: string, stringEnglishParagraph: string, buttonText: string, englishText: boolean) {
 
     const [paragraph, setParagraph] = useState(true)
 
-    function onclick(setParagraph, paragraph) { setParagraph(!paragraph) }
+    function onclick(setParagraph: Function, paragraph: boolean) { setParagraph(!paragraph) }
 
     return (
         <div className="flex flex-row" >

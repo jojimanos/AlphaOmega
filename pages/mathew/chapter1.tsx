@@ -187,7 +187,7 @@ export default function Chapter1({ newtest }: any) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getInitialProps() {
   const { db } = await connectToDatabase();
 
   const newtest = await db

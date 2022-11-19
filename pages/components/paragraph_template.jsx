@@ -10,7 +10,7 @@ export default function paragraphTemplate(stringParagraph, stringEnglishParagrap
     return (
         <div>
           <button onClick={() => onclick(setParagraph, paragraph)}>{buttonText}</button>
-          {paragraph && <div>{clickableWords(stringParagraph)}</div>}
+          <div>{clickableWords(stringParagraph)}</div>
           {paragraph && englishText && <div>{clickableWords(stringEnglishParagraph)}</div>}
         </div>
     )

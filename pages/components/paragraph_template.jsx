@@ -10,8 +10,8 @@ export default function paragraphTemplate(stringParagraph, stringEnglishParagrap
     return (
         <div className="flex flex-row" suppressHydrationWarning>
           <button className="basis-1/4" onClick={() => onclick(setParagraph, paragraph)}>{buttonText}</button>
-          {paragraph && <div className="App font-serif text-justify basis-2/4">{clickableWords(stringParagraph)}</div>}
-          {paragraph && englishText && <div className="App font-serif text-justify basis-2/4">{clickableWords(stringEnglishParagraph)}</div>}
+          {paragraph && <div className="font-serif text-justify basis-2/4">{clickableWords(stringParagraph)}</div>}
+          {paragraph && englishText && <div className="font-serif text-justify basis-2/4">{clickableWords(stringEnglishParagraph)}</div>}
         </div>
     )
 }

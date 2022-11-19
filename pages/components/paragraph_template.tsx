@@ -6,6 +6,7 @@ export default function paragraphTemplate(stringParagraph: string, stringEnglish
     const [paragraph, setParagraph] = useState(true)
 
     function onclick(setParagraph: Function, paragraph: boolean) { setParagraph(!paragraph) }
+    console.log(stringParagraph)
 
     return (
         <div className="flex flex-row" >

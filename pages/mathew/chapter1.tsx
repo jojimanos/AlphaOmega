@@ -5,7 +5,6 @@ import htmlEnglishText from "../components/htmlEnglishText"
 import paragraphTemplate from "../components/paragraph_template";
 import { useState } from "react";
 import reactElementToJSXString from "react-element-to-jsx-string";
-import { Suspense } from "react";
 
 export default function Chapter1({ newtest }: any) {
 
@@ -14,7 +13,7 @@ export default function Chapter1({ newtest }: any) {
   function htmlToString(props: JSX.Element): string {
     let text
     return (text = reactElementToJSXString(props))
-}
+  }
 
   //function englishTextAppear() { setEnglishText(!englishText) }
 
@@ -155,8 +154,8 @@ export default function Chapter1({ newtest }: any) {
 
   return (
     <div className={styles.container}>
-      <Suspense>
-        <button onClick={() => { setEnglishText(!englishText) }}>English Text</button>
+      <button onClick={() => { setEnglishText(!englishText) }}>English Text</button>
+      <div>
         <div>{paragraphTemplate(stringParagraph1, stringEnglishParagraph1, buttonText1, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph2, stringEnglishParagraph2, buttonText2, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph3, stringEnglishParagraph3, buttonText3, englishText)}</div>
@@ -182,12 +181,12 @@ export default function Chapter1({ newtest }: any) {
         <div>{paragraphTemplate(stringParagraph23, stringEnglishParagraph23, buttonText23, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph24, stringEnglishParagraph24, buttonText24, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph25, stringEnglishParagraph25, buttonText25, englishText)}</div>
-      </Suspense>
+      </div>
     </div>
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { db } = await connectToDatabase();
 
   const newtest = await db

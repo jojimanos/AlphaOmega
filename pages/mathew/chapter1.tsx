@@ -5,7 +5,7 @@ import htmlEnglishText from "../components/htmlEnglishText"
 import paragraphTemplate from "../components/paragraph_template";
 import { useState } from "react";
 import reactElementToJSXString from "react-element-to-jsx-string";
-
+import { Suspense } from "react";
 
 export default function Chapter1({ newtest }: any) {
 
@@ -101,7 +101,7 @@ export default function Chapter1({ newtest }: any) {
   const htmlEnglishParagraph24 = htmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 24 })
   const htmlEnglishParagraph25 = htmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 25 })
 
-  const stringParagraph1 = htmlToString(htmlParagraph1);
+  const stringParagraph1 = htmlToString(htmlParagraph1 as JSX.Element);
   const stringParagraph2 = htmlToString(htmlParagraph2 as JSX.Element);
   const stringParagraph3 = htmlToString(htmlParagraph3 as JSX.Element);
   const stringParagraph4 = htmlToString(htmlParagraph4 as JSX.Element);
@@ -155,6 +155,7 @@ export default function Chapter1({ newtest }: any) {
 
   return (
     <div className={styles.container}>
+      <Suspense>
         <button onClick={() => { setEnglishText(!englishText) }}>English Text</button>
         <div>{paragraphTemplate(stringParagraph1, stringEnglishParagraph1, buttonText1, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph2, stringEnglishParagraph2, buttonText2, englishText)}</div>
@@ -181,6 +182,7 @@ export default function Chapter1({ newtest }: any) {
         <div>{paragraphTemplate(stringParagraph23, stringEnglishParagraph23, buttonText23, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph24, stringEnglishParagraph24, buttonText24, englishText)}</div>
         <div>{paragraphTemplate(stringParagraph25, stringEnglishParagraph25, buttonText25, englishText)}</div>
+      </Suspense>
     </div>
   );
 }

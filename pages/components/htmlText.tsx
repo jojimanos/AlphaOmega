@@ -1,8 +1,11 @@
-export default function htmlText({ newtest }: any, props: any) {
+export default function HtmlText(props: any) {
 
-    const { author, chapter, paragraph } = props || {};
+    const { newtest, author, chapter, paragraph } = props || {};
 
-    const text = <div>{newtest?.map((x: any, i: any) => (<h2 key={i}>{x[author][chapter][paragraph]}</h2>))}</div>
+    const text = <div>{newtest[author][chapter][paragraph]}</div>
+
+    console.log(text)
+    //console.log(author)
 
     return (
         text

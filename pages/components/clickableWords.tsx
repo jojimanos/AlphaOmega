@@ -1,6 +1,6 @@
 import myJson from "../assets/bible_names.json"
 
-export default function clickableWords(props: any): JSX.Element[] {
+export default function ClickableWords(props: any): JSX.Element[] {
 
   const incoming = JSON.stringify(myJson)
 

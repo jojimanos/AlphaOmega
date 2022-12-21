@@ -6,14 +6,30 @@ import { useState } from "react";
 import reactElementToJSXString from "react-element-to-jsx-string";
 import HtmlText from "../components/htmlText";
 import data from "../../data/greek_text.json"
+import dynamic from "next/dynamic";
 
 export default function Chapter1() {
+
+  const HtmlText = dynamic(() => import('../components/htmlText'))
+
+  //function HtmlText(newtest: any, props: any) {
+//
+  //  const { author, chapter, paragraph } = props
+//
+  //  const text = <div>{newtest[author][chapter][paragraph]}</div>
+//
+  //  //console.log(text)
+  //  //console.log(author)
+//
+  //  return (text)
+  //}
 
   const newtest = JSON.parse(JSON.stringify(data))
 
   const author: string = "mathew"
   const chapter: string = "chapter_1"
   const paragraph: string = "paragraph_1"
+  const authorEnglish: string = "mathew_english"
 
   const text = newtest
 
@@ -52,37 +68,32 @@ export default function Chapter1() {
   const buttonText24 = "Paragraph 24"
   const buttonText25 = "Paragraph 25"
 
-
-
-  const authorEnglish: string = "mathew_english"
-
-
-  const htmlParagraph1 = HtmlText(text, { author, chapter, paragraph: "paragraph_1" })
-  const htmlParagraph2 = HtmlText(text, { author, chapter, paragraph: "paragraph_2" })
-  const htmlParagraph3 = HtmlText(text, { author, chapter, paragraph: "paragraph_3" })
-  const htmlParagraph4 = HtmlText(text, { author, chapter, paragraph: "paragraph_4" })
-  const htmlParagraph5 = HtmlText(text, { author, chapter, paragraph: "paragraph_5" })
-  const htmlParagraph6 = HtmlText(text, { author, chapter, paragraph: "paragraph_6" })
-  const htmlParagraph7 = HtmlText(text, { author, chapter, paragraph: "paragraph_7" })
-  const htmlParagraph8 = HtmlText(text, { author, chapter, paragraph: "paragraph_8" })
-  const htmlParagraph9 = HtmlText(text, { author, chapter, paragraph: "paragraph_9" })
-  const htmlParagraph10 = HtmlText(text, { author, chapter, paragraph: "paragraph_10" })
-  const htmlParagraph11 = HtmlText(text, { author, chapter, paragraph: "paragraph_11" })
-  const htmlParagraph12 = HtmlText(text, { author, chapter, paragraph: "paragraph_12" })
-  const htmlParagraph13 = HtmlText(text, { author, chapter, paragraph: "paragraph_13" })
-  const htmlParagraph14 = HtmlText(text, { author, chapter, paragraph: "paragraph_14" })
-  const htmlParagraph15 = HtmlText(text, { author, chapter, paragraph: "paragraph_15" })
-  const htmlParagraph16 = HtmlText(text, { author, chapter, paragraph: "paragraph_16" })
-  const htmlParagraph17 = HtmlText(text, { author, chapter, paragraph: "paragraph_17" })
-  const htmlParagraph18 = HtmlText(text, { author, chapter, paragraph: "paragraph_18" })
-  const htmlParagraph19 = HtmlText(text, { author, chapter, paragraph: "paragraph_19" })
-  const htmlParagraph20 = HtmlText(text, { author, chapter, paragraph: "paragraph_20" })
-  const htmlParagraph21 = HtmlText(text, { author, chapter, paragraph: "paragraph_21" })
-  const htmlParagraph22 = HtmlText(text, { author, chapter, paragraph: "paragraph_22" })
-  const htmlParagraph23 = HtmlText(text, { author, chapter, paragraph: "paragraph_23" })
-  const htmlParagraph24 = HtmlText(text, { author, chapter, paragraph: "paragraph_24" })
-  const htmlParagraph25 = HtmlText(text, { author, chapter, paragraph: "paragraph_25" })
-
+  const htmlParagraph1 = <HtmlText text={text[author][chapter]["paragraph_1"]}/>
+  const htmlParagraph2 = <HtmlText text={text[author][chapter]["paragraph_2"]}/>
+  //const htmlParagraph3 = HtmlText(text, { author, chapter, paragraph: "paragraph_3" })
+  //const htmlParagraph4 = HtmlText(text, { author, chapter, paragraph: "paragraph_4" })
+  //const htmlParagraph5 = HtmlText(text, { author, chapter, paragraph: "paragraph_5" })
+  //const htmlParagraph6 = HtmlText(text, { author, chapter, paragraph: "paragraph_6" })
+  //const htmlParagraph7 = HtmlText(text, { author, chapter, paragraph: "paragraph_7" })
+  //const htmlParagraph8 = HtmlText(text, { author, chapter, paragraph: "paragraph_8" })
+  //const htmlParagraph9 = HtmlText(text, { author, chapter, paragraph: "paragraph_9" })
+  //const htmlParagraph10 = HtmlText(text, { author, chapter, paragraph: "paragraph_10" })
+  //const htmlParagraph11 = HtmlText(text, { author, chapter, paragraph: "paragraph_11" })
+  //const htmlParagraph12 = HtmlText(text, { author, chapter, paragraph: "paragraph_12" })
+  //const htmlParagraph13 = HtmlText(text, { author, chapter, paragraph: "paragraph_13" })
+  //const htmlParagraph14 = HtmlText(text, { author, chapter, paragraph: "paragraph_14" })
+  //const htmlParagraph15 = HtmlText(text, { author, chapter, paragraph: "paragraph_15" })
+  //const htmlParagraph16 = HtmlText(text, { author, chapter, paragraph: "paragraph_16" })
+  //const htmlParagraph17 = HtmlText(text, { author, chapter, paragraph: "paragraph_17" })
+  //const htmlParagraph18 = HtmlText(text, { author, chapter, paragraph: "paragraph_18" })
+  //const htmlParagraph19 = HtmlText(text, { author, chapter, paragraph: "paragraph_19" })
+  //const htmlParagraph20 = HtmlText(text, { author, chapter, paragraph: "paragraph_20" })
+  //const htmlParagraph21 = HtmlText(text, { author, chapter, paragraph: "paragraph_21" })
+  //const htmlParagraph22 = HtmlText(text, { author, chapter, paragraph: "paragraph_22" })
+  //const htmlParagraph23 = HtmlText(text, { author, chapter, paragraph: "paragraph_23" })
+  //const htmlParagraph24 = HtmlText(text, { author, chapter, paragraph: "paragraph_24" })
+  //const htmlParagraph25 = HtmlText(text, { author, chapter, paragraph: "paragraph_25" })
+//
   //const htmlEnglishParagraph1 = HtmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 1 })
   //const htmlEnglishParagraph2 = HtmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 2 })
   //const htmlEnglishParagraph3 = HtmlEnglishText({ newtest }, { authorEnglish, chapter, paragraph: 3 })
@@ -111,29 +122,29 @@ export default function Chapter1() {
 
   const stringParagraph1 = htmlToString(htmlParagraph1);
   const stringParagraph2 = htmlToString(htmlParagraph2);
-  const stringParagraph3 = htmlToString(htmlParagraph3);
-  const stringParagraph4 = htmlToString(htmlParagraph4);
-  const stringParagraph5 = htmlToString(htmlParagraph5);
-  const stringParagraph6 = htmlToString(htmlParagraph6);
-  const stringParagraph7 = htmlToString(htmlParagraph7);
-  const stringParagraph8 = htmlToString(htmlParagraph8);
-  const stringParagraph9 = htmlToString(htmlParagraph9);
-  const stringParagraph10 = htmlToString(htmlParagraph10);
-  const stringParagraph11 = htmlToString(htmlParagraph11);
-  const stringParagraph12 = htmlToString(htmlParagraph12);
-  const stringParagraph13 = htmlToString(htmlParagraph13);
-  const stringParagraph14 = htmlToString(htmlParagraph14);
-  const stringParagraph15 = htmlToString(htmlParagraph15);
-  const stringParagraph16 = htmlToString(htmlParagraph16);
-  const stringParagraph17 = htmlToString(htmlParagraph17);
-  const stringParagraph18 = htmlToString(htmlParagraph18);
-  const stringParagraph19 = htmlToString(htmlParagraph19);
-  const stringParagraph20 = htmlToString(htmlParagraph20);
-  const stringParagraph21 = htmlToString(htmlParagraph21);
-  const stringParagraph22 = htmlToString(htmlParagraph22);
-  const stringParagraph23 = htmlToString(htmlParagraph23);
-  const stringParagraph24 = htmlToString(htmlParagraph24);
-  const stringParagraph25 = htmlToString(htmlParagraph25)
+  //const stringParagraph3 = htmlToString(htmlParagraph3);
+  //const stringParagraph4 = htmlToString(htmlParagraph4);
+  //const stringParagraph5 = htmlToString(htmlParagraph5);
+  //const stringParagraph6 = htmlToString(htmlParagraph6);
+  //const stringParagraph7 = htmlToString(htmlParagraph7);
+  //const stringParagraph8 = htmlToString(htmlParagraph8);
+  //const stringParagraph9 = htmlToString(htmlParagraph9);
+  //const stringParagraph10 = htmlToString(htmlParagraph10);
+  //const stringParagraph11 = htmlToString(htmlParagraph11);
+  //const stringParagraph12 = htmlToString(htmlParagraph12);
+  //const stringParagraph13 = htmlToString(htmlParagraph13);
+  //const stringParagraph14 = htmlToString(htmlParagraph14);
+  //const stringParagraph15 = htmlToString(htmlParagraph15);
+  //const stringParagraph16 = htmlToString(htmlParagraph16);
+  //const stringParagraph17 = htmlToString(htmlParagraph17);
+  //const stringParagraph18 = htmlToString(htmlParagraph18);
+  //const stringParagraph19 = htmlToString(htmlParagraph19);
+  //const stringParagraph20 = htmlToString(htmlParagraph20);
+  //const stringParagraph21 = htmlToString(htmlParagraph21);
+  //const stringParagraph22 = htmlToString(htmlParagraph22);
+  //const stringParagraph23 = htmlToString(htmlParagraph23);
+  //const stringParagraph24 = htmlToString(htmlParagraph24);
+  //const stringParagraph25 = htmlToString(htmlParagraph25)
 
   const stringEnglishParagraph1 = "aa"
   //= htmlToString(htmlEnglishParagraph1);
@@ -162,7 +173,7 @@ export default function Chapter1() {
   //const stringEnglishParagraph24 = htmlToString(htmlEnglishParagraph24);
   //const stringEnglishParagraph25 = htmlToString(htmlEnglishParagraph25);
 
-  console.log(stringParagraph1)
+  //console.log(stringParagraph1)
 
   return (
     <div className={styles.container}>
@@ -170,6 +181,7 @@ export default function Chapter1() {
       <div>
         <div>{ParagraphTemplate(stringParagraph1, stringEnglishParagraph1, buttonText1, englishText)}</div>
         <div>{ParagraphTemplate(stringParagraph2, stringEnglishParagraph1, buttonText2, englishText)}</div>
+        {/*
         <div>{ParagraphTemplate(stringParagraph3, stringEnglishParagraph1, buttonText3, englishText)}</div>
         <div>{ParagraphTemplate(stringParagraph4, stringEnglishParagraph1, buttonText4, englishText)}</div>
         <div>{ParagraphTemplate(stringParagraph5, stringEnglishParagraph1, buttonText5, englishText)}</div>
@@ -192,7 +204,7 @@ export default function Chapter1() {
         <div>{ParagraphTemplate(stringParagraph22, stringEnglishParagraph1, buttonText22, englishText)}</div>
         <div>{ParagraphTemplate(stringParagraph23, stringEnglishParagraph1, buttonText23, englishText)}</div>
         <div>{ParagraphTemplate(stringParagraph24, stringEnglishParagraph1, buttonText24, englishText)}</div>
-        <div>{ParagraphTemplate(stringParagraph25, stringEnglishParagraph1, buttonText25, englishText)}</div>
+        <div>{ParagraphTemplate(stringParagraph25, stringEnglishParagraph1, buttonText25, englishText)}</div>*/}
       </div>
     </div>
   );

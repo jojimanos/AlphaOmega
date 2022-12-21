@@ -24,8 +24,8 @@ export default function ClickableWords(props: any): JSX.Element[] {
 
   const arr = Array.from(props);
   const string: string = arr.join("");
-  const string2: string = string.slice(15); //Removes the starting tags from text
-  const string3: string = string2.slice(0,-15); 
+  const string2: string = string.slice(6); //Removes the starting tags from text
+  const string3: string = string2.slice(0,-6); 
   const words: string[] = string3.split(/ /g); //Splits words
   const words2= words.map((w, index) => <a key={index}><button className="hover:text-blue-700 hover:underline" onClick={() => { if (bibleNames.includes(w.replace(/[,.]/g, ''))) { wikipedia(w.replace(/[.,]/g, '')) } else { dictionary(w.replace(/[.,]/g, '')) } }}> {w} </button> </a>)
   return words2

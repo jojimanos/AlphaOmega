@@ -17,7 +17,7 @@ export default function ParagraphTemplate(stringParagraph: string, stringEnglish
 
   return (
     <div className="flex flex-row">
-        <button className="basis-1/4" onClick={() => onclick(setParagraph, paragraph)}>{buttonText}</button>
+        <button className="basis-1/4 hover:text-blue-800 hover:border-2" onClick={() => onclick(setParagraph, paragraph)}>{buttonText}</button>
         {paragraph && <div className="font-serif text-justify basis-2/4">{greek}</div>}
         {paragraph && englishText && <div className="font-serif text-justify basis-2/4">{english}</div>}
     </div>

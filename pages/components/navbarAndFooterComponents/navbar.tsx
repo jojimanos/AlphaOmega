@@ -14,10 +14,11 @@ function Navbar(props: any): JSX.Element {
                     </Link>
                 </p>
                 </div>
-                <LanguageSwitch locales={props.locales} locale={props.locale} asPath={props.asPath} />
                 <div className="">
-                    <button className={styles.container} onClick={() => props.toggleTheme()}>{props.themeswitch}</button>
-                    {/*<Dropdown settings={props.settings} themeswitch={props.themeswitch} toggleIt={()=>props.toggleTheme()} />*/}
+                    <button onClick={() => props.toggleTheme()}>{props.themeswitch}</button>
+                </div>
+                <div>
+                    <Dropdown locales={props.locales} locale={props.locale} asPath={props.asPath} languageswitch={props.languageswitch} toggleIt={() => props.toggleTheme()} />
                 </div>
                 <div>
                     <p className="sm:text-center">

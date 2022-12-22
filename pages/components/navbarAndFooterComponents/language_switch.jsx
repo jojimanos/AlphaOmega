@@ -5,11 +5,11 @@ export default function LanguageSwitch(props) {
   return(
 <div className="font-serif">
   <div className={styles.container}>
-    <div className="grid grid-cols-4">
+    <div className="grid grid-rows-4">
     {props.locales?.map((l, i) => {
       return (
         <button key={i} className={l === props.locale ? styles.selected : ""}>
-          <Link href={props.asPath} locale={l}>
+          <Link className="" href={props.asPath} locale={l}>
            {l}
           </Link>
         </button>

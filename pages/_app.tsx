@@ -9,6 +9,7 @@ import { useRouter } from 'next/router'
 import styles from '../styles/Home.module.css'
 import '../styles/popup2.css'
 import Footer from './components/navbarAndFooterComponents/footer'
+import LanguageSwitch from './components/navbarAndFooterComponents/language_switch'
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -26,8 +27,8 @@ return (
     <GlobalStyles />
     <div className='font-serif'>{Data.main_data
               .filter(p => p.locale === locale)
-              .map(({menu, settings, search, themeswitch}, i) => {
-              return <Navbar key={i} menu={menu} settings={settings} search={search} themeswitch={themeswitch} toggleTheme={toggleTheme} locales={locales} locale={locale} asPath={asPath}/>;
+              .map(({menu, settings, search, themeswitch, languageswitch}, i) => {
+              return <Navbar key={i} menu={menu} settings={settings} search={search} languageswitch={languageswitch} themeswitch={themeswitch} toggleTheme={toggleTheme} locales={locales} locale={locale} asPath={asPath}/>;
               })}
     </div>
         <Component {...pageProps} />

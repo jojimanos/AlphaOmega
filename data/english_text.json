@@ -53,8 +53,34 @@
             "paragraph_23": "",
             "paragraph_24": "",
             "paragraph_25": ""
-        }
-    },
+        },
+        "chapter_3": {
+            "paragraph_1": "",
+            "paragraph_2": "",
+            "paragraph_3": "",
+            "paragraph_4": "",
+            "paragraph_5": "",
+            "paragraph_6": "",
+            "paragraph_7": "",
+            "paragraph_8": "",
+            "paragraph_9": "",
+            "paragraph_10": "",
+            "paragraph_11": "",
+            "paragraph_12": "",
+            "paragraph_13": "",
+            "paragraph_14": "",
+            "paragraph_15": "",
+            "paragraph_16": "",
+            "paragraph_17": "",
+            "paragraph_18": "",
+            "paragraph_19": "",
+            "paragraph_20": "",
+            "paragraph_21": "",
+            "paragraph_22": "",
+            "paragraph_23": "",
+            "paragraph_24": ""
+    }
+},
     "mark": {
         "chapter": {
             "paragraph_1": "",
@@ -141,5 +167,14 @@
             "paragraph_24": "",
             "paragraph_25": ""
         }
+    },
+    "genesis": {
+        "chapter_1": {
+        "paragraph_1": "",
+        "paragraph_2": "",
+        "paragraph_3": "",
+        "paragraph_4": "",
+        "paragraph_5": ""
     }
+}
 }

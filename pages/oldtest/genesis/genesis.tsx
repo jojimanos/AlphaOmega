@@ -1,16 +1,16 @@
-import styles from "../../styles/Home.module.css";
-import ParagraphTemplate from "../components/paragraph_template";
+import styles from "../../../styles/Home.module.css";
+import ParagraphTemplate from "../../components/paragraph_template";
 import { useState } from "react";
 import reactElementToJSXString from "react-element-to-jsx-string";
-import data from "../../data/greek_text.json"
-import dataEnglish from "../../data/english_text.json"
+import data from "../../../data/greek_text.json"
+import dataEnglish from "../../../data/english_text.json"
 import dynamic from "next/dynamic";
 
 export default function Chapter1() {
 
-  const HtmlText = dynamic(() => import('../components/htmlText'))
+  const HtmlText = dynamic(() => import('../../components/htmlText'))
 
-  const HtmlEnglishText = dynamic(() => import('../components/htmlEnglishText'))
+  const HtmlEnglishText = dynamic(() => import('../../components/htmlEnglishText'))
 
   const newtest = JSON.parse(JSON.stringify(data))
 
@@ -20,7 +20,7 @@ export default function Chapter1() {
 
   const textEnglish = newtestEnglish
 
-  const author: string = "mathew"
+  const author: string = "genesis"
   const chapter: string = "chapter_1"
   const authorEnglish: string = "mathew_english"
 

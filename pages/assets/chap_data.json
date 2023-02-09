@@ -11,7 +11,8 @@
     "title_7": "",
     "title_8": "",
     "link_1": "mathew/chapter1",
-    "link_2": "mathew/chapter2"
+    "link_2": "mathew/chapter2",
+    "link_3": "mathew/chapter3"
   },  
   {
       "locale": "Greek",
@@ -24,7 +25,8 @@
       "title_7": "",
       "title_8": "",
       "link_1": "/mathew/chapter1",
-      "link_2": "/chapmath2"
+      "link_2": "/mathew/chapter2",
+      "link_3": "mathew/chapter3"
     }
 ]
 } 

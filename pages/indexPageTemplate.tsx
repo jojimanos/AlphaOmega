@@ -1,7 +1,7 @@
-import styles from "../../../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 import Link from "next/link";
 
-function Main_tem(props: { mainsets: any; }): JSX.Element {
+function IndexPageTemplate(props: { mainsets: any }): JSX.Element {
   const { mainsets } = props || {};
 
   const {
@@ -21,14 +21,14 @@ function Main_tem(props: { mainsets: any; }): JSX.Element {
         <p className={styles.description}>{description as string}</p>
 
         <div className={styles.grid}>
-          <Link href={"/books" || ''}>
+          <Link href={"/text/oldtest/books" || ""}>
             <div className={styles.card}>
               <h2>{OldTest as string} &rarr;</h2>
               <p>{Old_description as string}</p>
             </div>
           </Link>
 
-          <Link href={"/gosp" || ''}>
+          <Link href={"/text/newtest/books" || ""}>
             <div className={styles.card}>
               <h2>{NewTest as string} &rarr;</h2>
               <p>{New_description as string}</p>
@@ -40,4 +40,4 @@ function Main_tem(props: { mainsets: any; }): JSX.Element {
   );
 }
 
-export default Main_tem;
+export default IndexPageTemplate;

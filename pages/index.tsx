@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 import Data from "./assets/main_data.json";
-import Main_tem from "./components/pageTemplates/mainPageTemplate";
+import IndexPageTemplate from "./indexPageTemplate";
 
 const Home: NextPage = () => {
   const { locale, locales, asPath } = useRouter() || {};
@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         {Data.main_data
           .filter((p) => p.locale === locale)
           .map((mainsets, i) => {
-            return <Main_tem key={i} mainsets={mainsets} />;
+            return <IndexPageTemplate key={i} mainsets={mainsets} />;
           })}
       </div>
     </div>

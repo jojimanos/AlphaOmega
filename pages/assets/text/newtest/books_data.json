@@ -1,12 +1,12 @@
 {
-    "gosp_data": [
+  "books_data": [
     {
       "locale": "English",
       "title_1": "Mathew",
       "title_2": "Mark",
       "title_3": "Luke",
       "title_4": "John",
-      "link_1": "/chapmath",
+      "link_1": "/text/newtest/mathew/mathew",
       "link_2": "/",
       "link_3": "/",
       "link_4": "/"
@@ -22,5 +22,5 @@
       "link_3": "/",
       "link_4": "/"
     }
-]
+  ]
 }

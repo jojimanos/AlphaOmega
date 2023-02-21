@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-function Chapmath_tem(props: any): JSX.Element {
-  const { chapsets } = props || {};
+function GenesisTemplate(props: any): JSX.Element {
+  const { genesissets } = props || {};
 
   const {
     title_1,
@@ -12,37 +12,37 @@ function Chapmath_tem(props: any): JSX.Element {
     title_6,
     link_1,
     link_2,
-    link_3
-  } = chapsets || {};
+    link_3,
+  } = genesissets || {};
 
   return (
     <div className="text-center m-3 font-serif">
-      <Link href={link_1 || ''}>
+      <Link href={link_1 || ""}>
         <div>
           <p className="text-3xl py-2">1 {title_1 as string}</p>
         </div>
       </Link>
-      <Link href={link_2 || ''}>
+      <Link href={link_2 || ""}>
         <div>
           <p className="text-3xl py-2">2 {title_2 as string}</p>
         </div>
       </Link>
-      <Link href={link_3 || ''}>
+      <Link href={link_3 || ""}>
         <div>
           <p className="text-3xl py-2">3 {title_3 as string}</p>
         </div>
       </Link>
-      <Link href={link_2 || ''}>
+      <Link href={link_2 || ""}>
         <div>
           <p className="text-3xl py-2">4 {title_4 as string}</p>
         </div>
       </Link>
-      <Link href={link_2 || ''}>
+      <Link href={link_2 || ""}>
         <div>
           <p className="text-3xl py-2">5 {title_5 as string}</p>
         </div>
       </Link>
-      <Link href={link_2 || ''}>
+      <Link href={link_2 || ""}>
         <div>
           <p className="text-3xl py-2">6 {title_6 as string}</p>
         </div>
@@ -51,4 +51,4 @@ function Chapmath_tem(props: any): JSX.Element {
   );
 }
 
-export default Chapmath_tem;
+export default GenesisTemplate;

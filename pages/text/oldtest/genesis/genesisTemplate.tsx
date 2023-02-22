@@ -22,6 +22,7 @@ function GenesisTemplate(props: any): JSX.Element {
           <p className="text-3xl py-2">1 {title_1 as string}</p>
         </div>
       </Link>
+      {/*
       <Link href={link_2 || ""}>
         <div>
           <p className="text-3xl py-2">2 {title_2 as string}</p>
@@ -47,6 +48,7 @@ function GenesisTemplate(props: any): JSX.Element {
           <p className="text-3xl py-2">6 {title_6 as string}</p>
         </div>
       </Link>
+  */}
     </div>
   );
 }

@@ -15,6 +15,7 @@ function BooksListTemplate(props: { bookssets: any }): JSX.Element {
           </div>
         </Link>
       </div>
+      {/*
       <div className="text-3xl text-center m-3">
         <Link href={link_2 || ""}>
           <div className="p-5">
@@ -36,6 +37,7 @@ function BooksListTemplate(props: { bookssets: any }): JSX.Element {
           </div>
         </Link>
       </div>
+  */}
     </div>
   );
 }

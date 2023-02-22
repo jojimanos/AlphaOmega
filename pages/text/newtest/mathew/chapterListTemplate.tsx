@@ -32,6 +32,7 @@ function MathewTemplate(props: any): JSX.Element {
           <p className="text-3xl py-2">3 {title_3 as string}</p>
         </div>
       </Link>
+      {/*
       <Link href={link_2 || ""}>
         <div>
           <p className="text-3xl py-2">4 {title_4 as string}</p>
@@ -47,6 +48,7 @@ function MathewTemplate(props: any): JSX.Element {
           <p className="text-3xl py-2">6 {title_6 as string}</p>
         </div>
       </Link>
+  */}
     </div>
   );
 }

@@ -11,7 +11,20 @@
       "title_7": "",
       "title_8": "",
       "link_1": "/text/oldtest/genesis/chapter1",
-      "link_2": "mathew/chapter2"
+      "link_2": "/text/oldtest/genesis/chapter2"
+    },
+    {
+      "locale": "Greek",
+      "title_1": "Κεφάλαιον",
+      "title_2": "Chapter 2",
+      "title_3": "Chapter 3",
+      "title_4": "Chapter 4",
+      "title_5": "Chapter 5",
+      "title_6": "Chapter 6",
+      "title_7": "",
+      "title_8": "",
+      "link_1": "/text/oldtest/genesis/chapter1",
+      "link_2": "/text/oldtest/genesis/chapter2"
     }
   ]
 }

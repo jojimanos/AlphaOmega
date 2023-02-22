@@ -7,9 +7,20 @@
       "title_3": "",
       "title_4": "",
       "link_1": "/text/oldtest/genesis/genesis",
-      "link_2": "/",
-      "link_3": "/",
-      "link_4": "/"
+      "link_2": "/text/oldtest/",
+      "link_3": "/text/oldtest",
+      "link_4": "/text/oldtest"
+    },
+    {
+      "locale": "Greek",
+      "title_1": "Γένεσις",
+      "title_2": "",
+      "title_3": "",
+      "title_4": "",
+      "link_1": "/text/oldtest/genesis/genesis",
+      "link_2": "/text/oldtest/",
+      "link_3": "/text/oldtest",
+      "link_4": "/text/oldtest"
     }
   ]
 }

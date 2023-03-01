@@ -11,7 +11,11 @@
       "title_7": "",
       "title_8": "",
       "link_1": "/text/oldtest/genesis/chapter1",
-      "link_2": "/text/oldtest/genesis/chapter2"
+      "link_2": "/text/oldtest/genesis/chapter2",
+      "link_3": "/text/oldtest/genesis/chapter3",
+      "link_4": "/text/oldtest/genesis/chapter4",
+      "link_5": "/text/oldtest/genesis/chapter5",
+      "link_6": "/text/oldtest/genesis/chapter6"
     },
     {
       "locale": "Greek",
@@ -24,7 +28,11 @@
       "title_7": "",
       "title_8": "",
       "link_1": "/text/oldtest/genesis/chapter1",
-      "link_2": "/text/oldtest/genesis/chapter2"
+      "link_2": "/text/oldtest/genesis/chapter2",
+      "link_3": "/text/oldtest/genesis/chapter3",
+      "link_4": "/text/oldtest/genesis/chapter4",
+      "link_5": "/text/oldtest/genesis/chapter5",
+      "link_6": "/text/oldtest/genesis/chapter6"
     }
   ]
 }

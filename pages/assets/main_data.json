@@ -1,58 +1,58 @@
 {
-    "main_data": [
-      {
-        "locale": "English",
-        "main_title": "Welcome to ΑΩ",
-        "description": "A site dedicated to the study of Christian scriptures",
-        "OldTest": "Old Testament",
-        "NewTest": "New Tetstament",
-        "Old_description":"From Genesis to the\nMacabees",
-        "New_description":"From the Gospels to\nthe Apocalypse",
-        "powered": "Powered by",
-        "image": "",
-        "menu": "Menu",
-        "settings": "Settings",
-        "search": "Search",
-        "languageswitch": "Language",
-        "themeswitch": "Switch Theme"
-      },
-      {
-        "locale": "Espagnol",
-        "main_title": "Welcome to ΑΩ",
-        "description": "",
-        "image": "",
-        "menu": "Menu",
-        "settings": "Ajustes",
-        "search": "Búsqueda",
-        "languageswitch": "Language",
-        "themeswitch": "Switch Theme"
-      },
-      {
-        "locale": "Italian",
-        "main_title": "Welcome to ΑΩ",
-        "description": "",
-        "image": "",
-        "menu": "Menu",
-        "settings": "Adattamento",
-        "search": "Scrutare",
-        "languageswitch": "Language",
-        "themeswitch": "Switch Theme"
-      },
-      {
-        "locale": "Greek",
-        "main_title": "Καλῶς ὁρίσατε στὸ ΑΩ",
-        "description": "Ἑναν διαδικτυακὸ χῶρο ἀφιερωμένο στὴ μελέτη τῶν χριστιανικῶν γραφῶν",
-        "OldTest": "Παλαιὰ Διαθήκη",
-        "NewTest": "Καινὴ Διαθήκη",
-        "Old_description":"Ἀπὸ τὴν Γένεση στοὺς\nΜακαβαίους",
-        "New_description":"Ἀπὸ τὰ Εὐαγγέλια στὴν\nἈποκάλυψη",
-        "powered": "Δύναμις",
-        "image": "",
-        "menu": "Κυρίως Σελλίδα",
-        "settings": "Ῥυθμίσεις",
-        "search": "Ἀναζήτηση",
-        "languageswitch": "Γλῶσσα",
-        "themeswitch": "Ἀλλαγὴ Θέματος"
-      }
-    ]
-  }
+  "main_data": [
+    {
+      "locale": "English",
+      "main_title": "Welcome to ΑΩ",
+      "description": "A site dedicated to the study of Christian scriptures",
+      "OldTest": "Old Testament",
+      "NewTest": "New Tetstament",
+      "Old_description": "From Genesis to the\nMacabees",
+      "New_description": "From the Gospels to\nthe Apocalypse",
+      "powered": "Powered by",
+      "image": "",
+      "menu": "Menu",
+      "settings": "Settings",
+      "search": "Search",
+      "languageswitch": "Language",
+      "themeswitch": "Switch Theme"
+    },
+    {
+      "locale": "Espagnol",
+      "main_title": "Welcome to ΑΩ",
+      "description": "",
+      "image": "",
+      "menu": "Menu",
+      "settings": "Ajustes",
+      "search": "Búsqueda",
+      "languageswitch": "Language",
+      "themeswitch": "Switch Theme"
+    },
+    {
+      "locale": "Italian",
+      "main_title": "Welcome to ΑΩ",
+      "description": "",
+      "image": "",
+      "menu": "Menu",
+      "settings": "Adattamento",
+      "search": "Scrutare",
+      "languageswitch": "Language",
+      "themeswitch": "Switch Theme"
+    },
+    {
+      "locale": "Greek",
+      "main_title": "Καλῶς ὁρίσατε στὸ ΑΩ",
+      "description": "Ἑναν διαδικτυακὸ χῶρο ἀφιερωμένο στὴ μελέτη τῶν χριστιανικῶν γραφῶν",
+      "OldTest": "Παλαιὰ Διαθήκη",
+      "NewTest": "Καινὴ Διαθήκη",
+      "Old_description": "Ἀπὸ τὴν Γένεση στοὺς\nΜακαβαίους",
+      "New_description": "Ἀπὸ τὰ Εὐαγγέλια στὴν\nἈποκάλυψη",
+      "powered": "Δύναμις",
+      "image": "",
+      "menu": "Κυρίως Σελίδα",
+      "settings": "Ῥυθμίσεις",
+      "search": "Ἀναζήτηση",
+      "languageswitch": "Γλῶσσα",
+      "themeswitch": "Ἀλλαγὴ Θέματος"
+    }
+  ]
+}

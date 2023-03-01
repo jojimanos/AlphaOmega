@@ -13,6 +13,8 @@ function GenesisTemplate(props: any): JSX.Element {
     link_1,
     link_2,
     link_3,
+    link_4,
+    link_5,
   } = genesissets || {};
 
   return (
@@ -22,7 +24,6 @@ function GenesisTemplate(props: any): JSX.Element {
           <p className="text-3xl py-2">1 {title_1 as string}</p>
         </div>
       </Link>
-      {/*
       <Link href={link_2 || ""}>
         <div>
           <p className="text-3xl py-2">2 {title_2 as string}</p>
@@ -33,16 +34,17 @@ function GenesisTemplate(props: any): JSX.Element {
           <p className="text-3xl py-2">3 {title_3 as string}</p>
         </div>
       </Link>
-      <Link href={link_2 || ""}>
+      <Link href={link_4 || ""}>
         <div>
           <p className="text-3xl py-2">4 {title_4 as string}</p>
         </div>
       </Link>
-      <Link href={link_2 || ""}>
+      <Link href={link_5 || ""}>
         <div>
           <p className="text-3xl py-2">5 {title_5 as string}</p>
         </div>
       </Link>
+      {/*
       <Link href={link_2 || ""}>
         <div>
           <p className="text-3xl py-2">6 {title_6 as string}</p>

@@ -12,7 +12,10 @@
       "title_8": "",
       "link_1": "/text/newtest/mathew/chapter1",
       "link_2": "/text/newtest/mathew/chapter2",
-      "link_3": "/text/newtest/mathew/chapter3"
+      "link_3": "/text/newtest/mathew/chapter3",
+      "link_4": "/text/newtest/mathew/chapter4",
+      "link_5": "/text/newtest/mathew/chapter5",
+      "link_6": "/text/newtest/mathew/chapter6"
     },
     {
       "locale": "Greek",
@@ -26,7 +29,10 @@
       "title_8": "",
       "link_1": "/text/newtest/mathew/chapter1",
       "link_2": "/text/newtest/mathew/chapter2",
-      "link_3": "/text/newtest/mathew/chapter3"
+      "link_3": "/text/newtest/mathew/chapter3",
+      "link_4": "/text/newtest/mathew/chapter4",
+      "link_5": "/text/newtest/mathew/chapter5",
+      "link_6": "/text/newtest/mathew/chapter6"
     }
   ]
 }

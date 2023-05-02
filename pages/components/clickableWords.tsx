@@ -13,12 +13,12 @@ export default function ClickableWords(props: any): JSX.Element[] {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  function dictionary(w: string) {
+  function dictionary(w: string, index, words) {
     let link1 = "http://www.perseus.tufts.edu/hopper/morph?l=";
     let link2 = "&la=greek";
     let link = link1 + w + link2;
     open(link);
-    console.log(bibleNames);
+    console.log("WORD HERE", words[0]);
   }
 
   function wikipedia(w: string) {
@@ -36,38 +36,39 @@ export default function ClickableWords(props: any): JSX.Element[] {
   const string3: string = string2.slice(0, -4);
   const words: string[] = string3.split(/ /g); //Splits words
   const words2 = words.map((w, index) => (
-    <a key={index}>
+    <a>
       <button
+        key={index}
         className="hover:text-blue-700 hover:underline"
         onClick={() => {
           if (bibleNames.includes(w.replace(/[,.]/g, ""))) {
             wikipedia(w.replace(/[.,]/g, ""));
-            setOnPerseus(false);
-            setOnBibleNames(true);
+            //setOnPerseus(false);
+            //setOnBibleNames(true);
           } else {
-            dictionary(w.replace(/[.,]/g, ""));
-            setOnPerseus(true);
-            setOnBibleNames(false);
+            dictionary(w.replace(/[.,]/g, ""), index, words);
+            //setOnPerseus(true);
+            //setOnBibleNames(false);
           }
+        }}
+        onContextMenu={(e) => {
+          e.preventDefault();
+          onOpen();
         }}
       >
         {" "}
+        <ModalComponent
+          isOpen={isOpen}
+          onClose={onClose}
+          perseusLink={dictionary}
+          //bibleNamesLink={wikipedia(w.replace(/[.,]/g, ""))}
+          index={index}
+          word={words}
+          // onPerseus={onPerseus}
+          // onBibleNames={onBibleNames}
+        />
         {w}{" "}
       </button>{" "}
-      <button onClick={onOpen}>
-        PopUp
-        <Flex>
-          <ModalComponent
-            isOpen={isOpen}
-            onClose={onClose}
-            perseusLink={dictionary(w.replace(/[.,]/g, ""))}
-            bibleNamesLink={wikipedia(w.replace(/[.,]/g, ""))}
-            word={w}
-            onPerseus={onPerseus}
-            onBibleNames={onBibleNames}
-          />
-        </Flex>
-      </button>
     </a>
   ));
   return words2;

@@ -4,7 +4,6 @@ import {
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
   Flex,
@@ -14,21 +13,31 @@ type ModalProps = {
   isOpen: any;
   onClose: any;
   perseusLink: any;
-  bibleNamesLink: any;
-  word: string;
-  onPerseus: boolean;
-  onBibleNames: boolean;
+  //bibleNamesLink: any;
+  index: number;
+  word: string[];
+  //onPerseus: boolean;
+  //onBibleNames: boolean;
 };
 
 const ModalComponent: React.FC<ModalProps> = ({
   isOpen,
   onClose,
   perseusLink,
-  bibleNamesLink,
+  //  bibleNamesLink,
+  index,
   word,
-  onPerseus,
-  onBibleNames,
+  //onPerseus,
+  //onBibleNames,
 }) => {
+  function dictionary(word: string[], index: number) {
+    let link1 = "http://www.perseus.tufts.edu/hopper/morph?l=";
+    let link2 = "&la=greek";
+    let link = link1 + word[index] + link2;
+    console.log("The word is HERE", word[index], index);
+    open(link);
+  }
+
   return (
     <Modal
       size="md"
@@ -48,16 +57,22 @@ const ModalComponent: React.FC<ModalProps> = ({
           justifyContent="center"
           pb={6}
         >
-          {onPerseus && (
-            <Button mb={1} onClick={perseusLink}>
+          {
+            <Button
+              mb={1}
+              onClick={(e) => {
+                e.preventDefault();
+                dictionary(word, index);
+              }}
+            >
               Perseus
             </Button>
-          )}
-          {onBibleNames && (
-            <Button mb={1} onClick={bibleNamesLink}>
+          }
+          {
+            <Button mb={1} onClick={() => {}}>
               Bible Names
             </Button>
-          )}
+          }
           <Flex direction="column" align="center" justify="center" width="70%">
             <Button color="black.600" bg="blue.400" onClick={onClose}>
               Close

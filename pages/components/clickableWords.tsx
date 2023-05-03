@@ -13,12 +13,14 @@ export default function ClickableWords(props: any): JSX.Element[] {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
   function dictionary(w: string, index, words) {
     let link1 = "http://www.perseus.tufts.edu/hopper/morph?l=";
     let link2 = "&la=greek";
     let link = link1 + w + link2;
     open(link);
-    console.log("WORD HERE", words[0]);
+    console.log("WORD HERE", words[index], index);
   }
 
   function wikipedia(w: string) {
@@ -54,6 +56,8 @@ export default function ClickableWords(props: any): JSX.Element[] {
         onContextMenu={(e) => {
           e.preventDefault();
           onOpen();
+          setCurrentIndex(index);
+          console.log("MODAL IS OPEN ON", words[index]);
         }}
       >
         {" "}
@@ -62,7 +66,7 @@ export default function ClickableWords(props: any): JSX.Element[] {
           onClose={onClose}
           perseusLink={dictionary}
           //bibleNamesLink={wikipedia(w.replace(/[.,]/g, ""))}
-          index={index}
+          index={currentIndex}
           word={words}
           // onPerseus={onPerseus}
           // onBibleNames={onBibleNames}

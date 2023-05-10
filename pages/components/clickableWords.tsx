@@ -3,6 +3,7 @@ import myJson from "../assets/bible_names.json";
 import ModalComponent from "./modal";
 import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
+import PopOver from "./popover";
 
 export default function ClickableWords(props: any): JSX.Element[] {
   const incoming = JSON.stringify(myJson);
@@ -61,7 +62,7 @@ export default function ClickableWords(props: any): JSX.Element[] {
         }}
       >
         {" "}
-        <ModalComponent
+        {/*<ModalComponent
           isOpen={isOpen}
           onClose={onClose}
           perseusLink={dictionary}
@@ -70,8 +71,9 @@ export default function ClickableWords(props: any): JSX.Element[] {
           word={words}
           // onPerseus={onPerseus}
           // onBibleNames={onBibleNames}
-        />
-        {w}{" "}
+      />*/}
+        <PopOver w={words} index={index} />
+        {/*{w}*/}{" "}
       </button>{" "}
     </a>
   ));

@@ -14,7 +14,8 @@
       "settings": "Settings",
       "search": "Search",
       "languageswitch": "Language",
-      "themeswitch": "Switch Theme"
+      "themeswitch": "Switch Theme",
+      "pageNotFoundText": "Search and ye shall find."
     },
     {
       "locale": "Espagnol",
@@ -52,7 +53,8 @@
       "settings": "Ῥυθμίσεις",
       "search": "Ἀναζήτηση",
       "languageswitch": "Γλῶσσα",
-      "themeswitch": "Ἀλλαγὴ Θέματος"
+      "themeswitch": "Ἀλλαγὴ Θέματος",
+      "pageNotFoundText": "Αἰτεῖτε, καὶ δοθήσεται ὑμῖν."
     }
   ]
 }

@@ -38,14 +38,14 @@
     "react-router-dom": "^6.4.3",
     "reactjs-popup": "^2.0.5",
     "styled": "^1.0.0",
-    "styled-components": "^5.3.6",
-    "uuid": "^9.0.0"
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/node": "18.11.9",
     "@types/react": "^18.0.25",
     "@types/react-dom": "18.0.9",
     "@types/styled-components": "^5.1.26",
+    "@types/uuid": "^9.0.2",
     "autoprefixer": "^10.4.13",
     "core-js-pure": "3.26.1",
     "eslint": "8.27.0",

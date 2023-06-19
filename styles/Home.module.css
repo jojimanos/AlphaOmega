@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: auto;
 }
 
 .background::after {
@@ -15,7 +16,7 @@
 
 .container {
   padding: 0 2rem;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .main {
@@ -137,7 +138,7 @@
   }
   .container {
     padding: 0 0.5rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", Times, serif;
   }
   .description {
     margin: 4rem 0;

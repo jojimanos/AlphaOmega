@@ -7,36 +7,26 @@ import {
   ModalHeader,
   ModalOverlay,
   Flex,
+  Text,
 } from "@chakra-ui/react";
+import { useClickableWord } from "../../methods/useClickableWord";
 
 type ModalProps = {
   isOpen: any;
   onClose: any;
-  perseusLink: any;
-  //bibleNamesLink: any;
-  index: number;
-  word: string[];
-  //onPerseus: boolean;
-  //onBibleNames: boolean;
+  searchOnPerseus: any;
+  searchOnBibleNames: any;
+  word: string;
 };
 
 const ModalComponent: React.FC<ModalProps> = ({
   isOpen,
   onClose,
-  perseusLink,
-  //  bibleNamesLink,
-  index,
+  searchOnPerseus,
+  searchOnBibleNames,
   word,
-  //onPerseus,
-  //onBibleNames,
 }) => {
-  function dictionary(word: string[], index: number) {
-    let link1 = "http://www.perseus.tufts.edu/hopper/morph?l=";
-    let link2 = "&la=greek";
-    let link = link1 + word[index] + link2;
-    console.log("The word is HERE", word[index], index);
-    open(link);
-  }
+  const { dictionary, wikipedia, searchForTheWord } = useClickableWord;
 
   return (
     <Modal
@@ -57,19 +47,28 @@ const ModalComponent: React.FC<ModalProps> = ({
           justifyContent="center"
           pb={6}
         >
+          <Text>{}</Text>
           {
             <Button
               mb={1}
               onClick={(e) => {
                 e.preventDefault();
-                dictionary(word, index);
+                dictionary(word);
+                e.stopPropagation();
               }}
             >
               Perseus
             </Button>
           }
           {
-            <Button mb={1} onClick={() => {}}>
+            <Button
+              mb={1}
+              onClick={(e) => {
+                e.preventDefault();
+                wikipedia(word);
+                e.stopPropagation();
+              }}
+            >
               Bible Names
             </Button>
           }

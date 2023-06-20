@@ -1,5 +1,8 @@
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Footer from "./components/navbarAndFooterComponents/footer";
+import { useRouter } from "next/router";
+import Data from "./assets/main_data.json";
 
 function IndexPageTemplate(props: { mainsets: any }): JSX.Element {
   const { mainsets } = props || {};
@@ -11,7 +14,10 @@ function IndexPageTemplate(props: { mainsets: any }): JSX.Element {
     NewTest,
     Old_description,
     New_description,
+    powered,
   } = mainsets || {};
+
+  const { locale, locales, asPath } = useRouter() || {};
 
   return (
     <div>
@@ -35,6 +41,11 @@ function IndexPageTemplate(props: { mainsets: any }): JSX.Element {
             </div>
           </Link>
         </div>
+        {Data.main_data
+          .filter((p) => p.locale === locale)
+          .map(({ powered }, i) => {
+            return <Footer key={i} powered={powered} />;
+          })}
       </main>
     </div>
   );

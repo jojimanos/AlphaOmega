@@ -15,7 +15,8 @@
       "search": "Search",
       "languageswitch": "Language",
       "themeswitch": "Switch Theme",
-      "pageNotFoundText": "Search and ye shall find."
+      "pageNotFoundHeader": "Search and ye shall find.",
+      "pageNotFoundText": "404 - Page not found"
     },
     {
       "locale": "Espagnol",
@@ -54,7 +55,8 @@
       "search": "Ἀναζήτηση",
       "languageswitch": "Γλῶσσα",
       "themeswitch": "Ἀλλαγὴ Θέματος",
-      "pageNotFoundText": "Αἰτεῖτε, καὶ δοθήσεται ὑμῖν."
+      "pageNotFoundHeader": "Αἰτεῖτε, καὶ δοθήσεται ὑμῖν.",
+      "pageNotFoundText": "404 - Ἡ σελίδα δὲ βρέθηκε"
     }
   ]
 }

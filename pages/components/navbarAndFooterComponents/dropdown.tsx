@@ -3,29 +3,31 @@ import styles from "../../../styles/Home.module.css";
 import LanguageSwitch from "./language_switch";
 
 function Dropdown(props: any) {
-
-  const dropdownRef = useRef<any>(null)
-  const [open, setOpen] = useState<boolean>(false)
-  const handleButtonClick = () => setOpen(!open)
+  const dropdownRef = useRef<any>(null);
+  const [open, setOpen] = useState<boolean>(false);
+  const handleButtonClick = () => setOpen(!open);
 
   useEffect(() => {
     const pageClickEvent = (e: any) => {
-      if (dropdownRef.current !== null && !dropdownRef.current.contains(e.target)) {
-        setOpen(!open)
+      if (
+        dropdownRef.current !== null &&
+        !dropdownRef.current.contains(e.target)
+      ) {
+        setOpen(!open);
       }
-    }
+    };
     if (open) {
-      window.addEventListener('click', pageClickEvent)
+      window.addEventListener("click", pageClickEvent);
     }
     return () => {
-      window.removeEventListener('click', pageClickEvent)
-    }
-  },
-    [open])
+      window.removeEventListener("click", pageClickEvent);
+    };
+  }, [open]);
 
   return (
-    <p ref={dropdownRef} className="dropdown">
-      <button className="
+    <div ref={dropdownRef} className="dropdown">
+      <button
+        className="
           dropdown-toggle
           leading-tight
           hover:bg-gray-200
@@ -40,13 +42,16 @@ function Dropdown(props: any) {
         type="button"
         id="dropdownMenuButton1"
         data-bs-toggle="dropdown"
-        aria-expanded="false" onClick={handleButtonClick}>
+        aria-expanded="false"
+        onClick={handleButtonClick}
+      >
         {props.languageswitch}
       </button>
       <nav>
         {open && (
           <ul>
-            <li className="
+            <li
+              className="
               py-2
               px-4
               flex
@@ -56,12 +61,21 @@ function Dropdown(props: any) {
               text-gray-700
               hover:bg-gray-100
             "
-              ><LanguageSwitch locales={props.locales} locale={props.locale} asPath={props.asPath} languageswitch={props.languageswitch}/></li>
-            <li><hr /></li>
+            >
+              <LanguageSwitch
+                locales={props.locales}
+                locale={props.locale}
+                asPath={props.asPath}
+                languageswitch={props.languageswitch}
+              />
+            </li>
+            <li>
+              <hr />
+            </li>
           </ul>
         )}
       </nav>
-    </p>
+    </div>
   );
 }
 

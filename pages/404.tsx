@@ -1,18 +1,22 @@
 import { useRouter } from "next/router";
 import React from "react";
 import Data from "./assets/main_data.json";
+import styles from "../styles/Home.module.css";
 
 const PageNotFound: React.FC = () => {
   const { locale } = useRouter() || {};
 
   return (
-    <div>
+    <>
       {Data.main_data
         .filter((p) => p.locale === locale)
         .map((text, index) => (
-          <h1 key={index}>{text.pageNotFoundText}</h1>
+          <div key={index} className={styles.pageNotFound}>
+            <h1>{text.pageNotFoundHeader}</h1>
+            <p>{text.pageNotFoundText}</p>
+          </div>
         ))}
-    </div>
+    </>
   );
 };
 

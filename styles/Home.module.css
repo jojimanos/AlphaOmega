@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: auto;
+  height: max-content;
 }
 
 .background::after {
@@ -29,11 +29,19 @@
   align-items: center;
 }
 
+.pageNotFound {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer {
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
 }

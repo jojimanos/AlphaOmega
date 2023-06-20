@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/Home.module.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
@@ -7,8 +8,6 @@ import Data from "./assets/main_data.json";
 import Navbar from "./components/navbarAndFooterComponents/navbar";
 import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
-import Footer from "./components/navbarAndFooterComponents/footer";
-import LanguageSwitch from "./components/navbarAndFooterComponents/language_switch";
 import { ChakraProvider } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -51,13 +50,6 @@ function MyApp({ Component, pageProps }: AppProps) {
               )}
           </div>
           <Component {...pageProps} />
-          <div className="font-serif">
-            {Data.main_data
-              .filter((p) => p.locale === locale)
-              .map(({ powered }, i) => {
-                return <Footer key={i} powered={powered} />;
-              })}
-          </div>
         </ThemeProvider>
       </ChakraProvider>
     </div>

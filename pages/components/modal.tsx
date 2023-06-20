@@ -10,23 +10,24 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useClickableWord } from "../../methods/useClickableWord";
+import { useEffect } from "react";
 
 type ModalProps = {
   isOpen: any;
   onClose: any;
-  searchOnPerseus: any;
-  searchOnBibleNames: any;
   word: string;
+  onPerseus: boolean;
+  onBibleNames: boolean;
 };
 
 const ModalComponent: React.FC<ModalProps> = ({
   isOpen,
   onClose,
-  searchOnPerseus,
-  searchOnBibleNames,
   word,
+  onPerseus,
+  onBibleNames,
 }) => {
-  const { dictionary, wikipedia, searchForTheWord } = useClickableWord;
+  const { perseusSearch, bibleNamesSearch, LSJSearch } = useClickableWord;
 
   return (
     <Modal
@@ -39,7 +40,7 @@ const ModalComponent: React.FC<ModalProps> = ({
       <ModalOverlay bg="blackAlpha.50" />
       <ModalContent>
         <ModalCloseButton alignItems="flex-end" />
-        <ModalHeader textAlign="center">Modal Title</ModalHeader>
+        <ModalHeader textAlign="center">Make a search in:</ModalHeader>
         <ModalBody
           display="flex"
           flexDirection="column"
@@ -47,31 +48,42 @@ const ModalComponent: React.FC<ModalProps> = ({
           justifyContent="center"
           pb={6}
         >
-          <Text>{}</Text>
-          {
+          {onPerseus && (
             <Button
               mb={1}
               onClick={(e) => {
                 e.preventDefault();
-                dictionary(word);
+                perseusSearch(word);
                 e.stopPropagation();
               }}
             >
               Perseus
             </Button>
-          }
-          {
+          )}
+          {onPerseus && (
             <Button
               mb={1}
               onClick={(e) => {
                 e.preventDefault();
-                wikipedia(word);
+                LSJSearch(word);
+                e.stopPropagation();
+              }}
+            >
+              LSJ
+            </Button>
+          )}
+          {onBibleNames && (
+            <Button
+              mb={1}
+              onClick={(e) => {
+                e.preventDefault();
+                bibleNamesSearch(word);
                 e.stopPropagation();
               }}
             >
               Bible Names
             </Button>
-          }
+          )}
           <Flex direction="column" align="center" justify="center" width="70%">
             <Button color="black.600" bg="blue.400" onClick={onClose}>
               Close

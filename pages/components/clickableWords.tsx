@@ -18,7 +18,7 @@ export default function ClickableWords(props: any): JSX.Element[] {
   const [onPerseus, setOnPerseus] = useState<boolean>(false);
   const [onBibleNames, setOnBibleNames] = useState<boolean>(true);
 
-  const { dictionary, wikipedia, searchForTheWord } = useClickableWord;
+  const { searchForTheWord, checkWordResources } = useClickableWord;
 
   const arr = Array.from(props);
   const string: string = arr.join("");
@@ -27,16 +27,17 @@ export default function ClickableWords(props: any): JSX.Element[] {
   const words: string[] = string3.split(/ /g); //Splits words
   const words2 = words.map((w, index) => {
     return (
-      <a key={index}>
+      <span key={index}>
         <button
           key={index}
           className="hover:text-blue-700 hover:underline"
           onClick={() => {
-            searchForTheWord(w, bibleNames, index);
+            searchForTheWord(w, bibleNames);
           }}
           onContextMenu={(event) => {
             event.preventDefault();
             setCurrentWord(w);
+            checkWordResources(bibleNames, w, setOnPerseus, setOnBibleNames);
             onOpen();
           }}
         >
@@ -45,12 +46,12 @@ export default function ClickableWords(props: any): JSX.Element[] {
           <ModalComponent
             isOpen={isOpen}
             onClose={onClose}
-            searchOnPerseus={dictionary}
-            searchOnBibleNames={wikipedia}
             word={currentWord}
+            onPerseus={onPerseus}
+            onBibleNames={onBibleNames}
           />{" "}
         </button>{" "}
-      </a>
+      </span>
     );
   });
   return words2;

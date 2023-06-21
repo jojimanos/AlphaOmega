@@ -2,6 +2,7 @@ import { useState } from "react";
 import clickableWords from "./clickableWords";
 import MediaQuery from "react-responsive";
 import simpleWords from "./simpleWords";
+import styles from "../../styles/Home.module.css";
 
 export default function ParagraphTemplate(
   stringParagraph: string,
@@ -20,7 +21,7 @@ export default function ParagraphTemplate(
   const english = simpleWords(stringEnglishParagraph);
 
   return (
-    <div>
+    <div className={styles.paragraph}>
       <MediaQuery minWidth={641}>
         <div className="flex flex-row">
           <button

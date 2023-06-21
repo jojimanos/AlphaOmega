@@ -14,9 +14,10 @@
       "settings": "Settings",
       "search": "Search",
       "languageswitch": "Language",
-      "themeswitch": "Switch Theme",
+      "themeswitch": "Switch\nTheme",
       "pageNotFoundHeader": "Search and ye shall find.",
-      "pageNotFoundText": "404 - Page not found"
+      "pageNotFoundText": "404 - Page not found",
+      "wordsearch": "Make a search in:"
     },
     {
       "locale": "Espagnol",
@@ -50,13 +51,14 @@
       "New_description": "Ἀπὸ τὰ Εὐαγγέλια στὴν\nἈποκάλυψη",
       "powered": "Δύναμις",
       "image": "",
-      "menu": "Κυρίως Σελίδα",
+      "menu": "Ἀρχικὴ\nΣελίδα",
       "settings": "Ῥυθμίσεις",
       "search": "Ἀναζήτηση",
       "languageswitch": "Γλῶσσα",
-      "themeswitch": "Ἀλλαγὴ Θέματος",
+      "themeswitch": "Ἀλλαγὴ\nΘέματος",
       "pageNotFoundHeader": "Αἰτεῖτε, καὶ δοθήσεται ὑμῖν.",
-      "pageNotFoundText": "404 - Ἡ σελίδα δὲ βρέθηκε"
+      "pageNotFoundText": "404 - Ἡ σελίδα δὲ βρέθηκε",
+      "wordsearch": "Αναζήτηση σε:"
     }
   ]
 }

@@ -41,11 +41,6 @@ function IndexPageTemplate(props: { mainsets: any }): JSX.Element {
             </div>
           </Link>
         </div>
-        {Data.main_data
-          .filter((p) => p.locale === locale)
-          .map(({ powered }, i) => {
-            return <Footer key={i} powered={powered} />;
-          })}
       </main>
     </div>
   );

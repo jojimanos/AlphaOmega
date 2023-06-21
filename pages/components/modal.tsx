@@ -18,6 +18,7 @@ type ModalProps = {
   word: string;
   onPerseus: boolean;
   onBibleNames: boolean;
+  text: string;
 };
 
 const ModalComponent: React.FC<ModalProps> = ({
@@ -26,6 +27,7 @@ const ModalComponent: React.FC<ModalProps> = ({
   word,
   onPerseus,
   onBibleNames,
+  text,
 }) => {
   const { perseusSearch, bibleNamesSearch, LSJSearch } = useClickableWord;
 
@@ -40,7 +42,7 @@ const ModalComponent: React.FC<ModalProps> = ({
       <ModalOverlay bg="blackAlpha.50" />
       <ModalContent>
         <ModalCloseButton alignItems="flex-end" />
-        <ModalHeader textAlign="center">Make a search in:</ModalHeader>
+        <ModalHeader textAlign="center">{text}</ModalHeader>
         <ModalBody
           display="flex"
           flexDirection="column"

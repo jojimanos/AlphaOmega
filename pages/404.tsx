@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import Data from "./assets/main_data.json";
 import styles from "../styles/Home.module.css";
+import Footer from "./components/navbarAndFooterComponents/footer";
 
 const PageNotFound: React.FC = () => {
   const { locale } = useRouter() || {};

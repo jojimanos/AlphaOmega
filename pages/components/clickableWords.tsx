@@ -1,8 +1,10 @@
 import { useDisclosure } from "@chakra-ui/react";
 import myJson from "../assets/bible_names.json";
+import Data from "../assets/main_data.json";
 import ModalComponent from "./modal";
 import { useState } from "react";
 import { useClickableWord } from "../../methods/useClickableWord";
+import { useRouter } from "next/router";
 
 export default function ClickableWords(props: any): JSX.Element[] {
   const incoming = JSON.stringify(myJson);
@@ -19,6 +21,8 @@ export default function ClickableWords(props: any): JSX.Element[] {
   const [onBibleNames, setOnBibleNames] = useState<boolean>(true);
 
   const { searchForTheWord, checkWordResources } = useClickableWord;
+
+  const { locale } = useRouter() || {};
 
   const arr = Array.from(props);
   const string: string = arr.join("");
@@ -43,13 +47,19 @@ export default function ClickableWords(props: any): JSX.Element[] {
         >
           {" "}
           {w}
-          <ModalComponent
-            isOpen={isOpen}
-            onClose={onClose}
-            word={currentWord}
-            onPerseus={onPerseus}
-            onBibleNames={onBibleNames}
-          />{" "}
+          {Data.main_data
+            .filter((p) => p.locale === locale)
+            .map((data, i) => (
+              <ModalComponent
+                key={i}
+                isOpen={isOpen}
+                onClose={onClose}
+                word={currentWord}
+                onPerseus={onPerseus}
+                onBibleNames={onBibleNames}
+                text={data.wordsearch}
+              />
+            ))}{" "}
         </button>{" "}
       </span>
     );

@@ -16,8 +16,8 @@ const SwitchTheme: React.FC<SwitchThemeProps> = ({
         className={styles.navButtonIcon}
         src="/scroll.png"
         alt=""
-        height={40}
-        width={100}
+        height={120}
+        width={120}
       />
       <span>{themeswitch}</span>
     </button>

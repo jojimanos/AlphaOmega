@@ -18,7 +18,7 @@ type ModalProps = {
   word: string;
   onPerseus: boolean;
   onBibleNames: boolean;
-  text: string;
+  text: string | undefined;
 };
 
 const ModalComponent: React.FC<ModalProps> = ({

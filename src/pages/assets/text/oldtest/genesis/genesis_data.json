@@ -1,0 +1,28 @@
+{
+  "genesis_data": [
+    {
+      "locale": "English",
+      "title_1": "Chapter 1",
+      "title_2": "Chapter 2",
+      "title_3": "Chapter 3",
+      "title_4": "Chapter 4",
+      "title_5": "Chapter 5",
+      "title_6": "Chapter 6",
+      "title_7": "",
+      "title_8": "",
+      "link": "/text/oldtest/genesis/chapters/"
+    },
+    {
+      "locale": "Greek",
+      "title": "Κεφάλαιον",
+      "title_2": "Chapter 2",
+      "title_3": "Chapter 3",
+      "title_4": "Chapter 4",
+      "title_5": "Chapter 5",
+      "title_6": "Chapter 6",
+      "title_7": "",
+      "title_8": "",
+      "link": "/text/oldtest/genesis/chapters/"
+    }
+  ]
+}

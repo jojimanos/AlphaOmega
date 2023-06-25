@@ -1,0 +1,28 @@
+{
+  "mathew_data": [
+    {
+      "locale": "English",
+      "title_1": "Jesus Christ s Genealogy",
+      "title_2": "The mages in Jerusalem and Bethleem. Herodes worried.\nThe nativity in Egypt and the slaughter of infants.",
+      "title_3": "The preaching and baptism of John. The Pharisees and Sadducees\nin baptism. Jesus' baptism.",
+      "title_4": "The temptations of Jesus Christ. The Lord in Capernaum.\nThe calling of the four first disciples.",
+      "title_5": "Sermon of Jesus on the mount. The blessings. The disciples are the essence\nof the earth and the light of the world. The law of Moses and the words of the prophets completed.",
+      "title_6": "Mercyfullness. Prayer. Fasting. The treasures of earth. Common life issues.",
+      "title_7": "",
+      "title_8": "",
+      "link": "/text/newtest/mathew/chapters/"
+    },
+    {
+      "locale": "Greek",
+      "title_1": "Ἡ Γενεαλογία τοῦ Ἰησοῦ Χριστοῦ",
+      "title_2": "Οἱ μάγοι εἰς Ἰερουσαλὴμ καὶ Βηθλεέμ. Ἡ ταραχὴ τοῦ Ἡρώδου.\nἩ φυγὴ εἰς Αἴγυπτον καὶ ἡ σφαγὴ τῶν νηπίων.",
+      "title_3": "Τὸ κήρυγμα καὶ τὸ βάπτισμα τοῦ Ἰωάννου. Οἱ Φαρισαῖοι καὶ οἱ Σαδδουκαῖοι\nεἰς τὸ βάπτισμα. Ὁ Ἰησοῦς βαπτίζεται",
+      "title_4": "Οἱ πειρασμοὶ τοῦ Ἰησοῦ Χριστοῦ. Ὁ Κύριος εἰς Καπερναούμ. Ἡ κλῆσις\nτῶν τεσσάρων πρώτων μαθητῶν.",
+      "title_5": "Ἡ ἐπὶ τοῦ Ὄρους ὁμιλία τοῦ Κυρίου. Οἱ μακαρισμοί. Οἱ μαθηταὶ ἅλας τῆς\nγῆς καὶ τὸ φῶς τοῦ κόσμου. Τὸ πλήρωμα τοῦ Νόμου καὶ τῶν προφητῶν.",
+      "title_6": "Ἡ ἐλεημοσύνη. Ἡ νηστεία. Οἱ ἐπίγειοι θησσαυροί. Αἱ βιοτικαὶ μέριμναι.",
+      "title_7": "",
+      "title_8": "",
+      "link1": "/text/newtest/mathew/chapters/"
+    }
+  ]
+}

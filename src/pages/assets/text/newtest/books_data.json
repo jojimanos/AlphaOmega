@@ -1,0 +1,26 @@
+{
+  "books_data": [
+    {
+      "locale": "English",
+      "title_1": "Mathew",
+      "title_2": "Mark",
+      "title_3": "Luke",
+      "title_4": "John",
+      "link_1": "/text/newtest/mathew/mathew",
+      "link_2": "/text/newtest/mark/mark",
+      "link_3": "/text/newtest/luke/luke",
+      "link_4": "/text/newtest/john/john"
+    },
+    {
+      "locale": "Greek",
+      "title_1": "Κατὰ Ματθαῖον",
+      "title_2": "Κατὰ Μάρκον",
+      "title_3": "Κατὰ Λουκὰν",
+      "title_4": "Κατὰ Ἰωάννην",
+      "link_1": "/text/newtest/mathew/mathew",
+      "link_2": "/text/newtest/mark/mark",
+      "link_3": "/text/newtest/luke/luke",
+      "link_4": "/text/newtest/john/john"
+    }
+  ]
+}

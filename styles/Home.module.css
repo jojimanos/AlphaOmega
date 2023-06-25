@@ -60,6 +60,12 @@
   align-items: center;
 }
 
+.textLanguageSwitch {
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 40px 100px 40px;
+}
+
 .footer a {
   display: flex;
   justify-content: center;

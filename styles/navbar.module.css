@@ -1,3 +1,8 @@
+.navbarContainer {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
 .navButton {
   position: relative;
   display: inline-block;

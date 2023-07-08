@@ -14,12 +14,6 @@ type SubmitFormProps = {
   helper: string;
   toggleText: boolean;
   setToggleText: React.Dispatch<React.SetStateAction<boolean>>;
-  onSubmit: (
-    email: string,
-    password: string
-  ) => React.FormEventHandler<HTMLFormElement> | undefined;
-  validationErrorEmail: boolean;
-  validationErrorPassword: boolean;
 };
 
 const SubmitForm: React.FC<SubmitFormProps> = ({
@@ -27,18 +21,95 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
   helper,
   toggleText,
   setToggleText,
-  onSubmit,
-  validationErrorEmail,
-  validationErrorPassword,
 }) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
   console.log("Email", email);
   console.log("Password", password);
+  
+  const [validationErrorEmail, setValidationErrorEmail] =
+    useState<boolean>(false);
+  const [validationErrorPassword, setValidationErrorPassword] =
+    useState<boolean>(false);
+
+  const SchemaValidation = (email: string, password: string) => {
+    setValidationErrorEmail(false);
+    setValidationErrorPassword(false);
+    let validSchema = true
+
+    if (email === "") {
+      setValidationErrorEmail(true);
+      validSchema = false;
+    }
+    if (password.length === 0) {
+      setValidationErrorPassword(true);
+      validSchema = false;
+    }
+    return validSchema
+  };
+
+  const onLogin = async (
+    e: React.FormEvent<HTMLFormElement>,
+    email: string,
+    password: string
+  ) => {
+    e.preventDefault();
+    //validate the input data
+    // console.log("Login");
+
+    let isValidSchema = SchemaValidation(email, password)
+
+    if (isValidSchema)
+      try {
+        console.log("Success")
+      } catch (error: any) {
+        console.log("Create User Error", error.message)
+      }
+      // try {
+      // const user = await signInWithEmailAndPassword(auth, email, password);
+      // console.log(user);
+      // const userId = localStorage.setItem("user", JSON.stringify(user));
+      // router.push("/");
+      // } catch (error) {
+      // setError(
+      // "There was an error when signing in. Please check email and password."
+      // );
+      console.log("Login");
+
+    //firestore logic
+  };
+
+  const onSignUp = async (
+    e: React.FormEvent<HTMLFormElement>,
+  ) => {
+    e.preventDefault();
+    //validate the input data
+    // console.log("Signup");
+
+    let isValidSchema = SchemaValidation(email, password)
+
+    if (isValidSchema)
+      try {
+        console.log("Success")
+      } catch (error: any) {
+        console.log("Create User Error", error.message)
+      }
+      // try {
+      // const user = await signInWithEmailAndPassword(auth, email, password);
+      // console.log(user);
+      // const userId = localStorage.setItem("user", JSON.stringify(user));
+      // router.push("/");
+      // } catch (error) {
+      // setError(
+      // "There was an error when signing in. Please check email and password."
+      // );
+      console.log("Login");
+    //firestore logic
+  };
 
   return (
-    <form onSubmit={() => onSubmit(email, password)}>
+    <form onSubmit={onSignUp}>
       <FormControl
         borderStyle="solid"
         borderColor="red.500"

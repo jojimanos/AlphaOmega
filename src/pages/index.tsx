@@ -10,7 +10,7 @@ import { Flex } from "@chakra-ui/react";
 const Home: NextPage = () => {
   const { locale, locales, asPath } = useRouter() || {};
 
-  const [currentAuthState, setCurrentAuthState] = useState("authenticated");
+  const [currentAuthState, setCurrentAuthState] = useState("");
 
   return (
     <Flex align="center" justify="center">

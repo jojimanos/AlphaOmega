@@ -8,6 +8,9 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import React, { SetStateAction, useEffect, useState } from "react";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "../../../firebaseConfig";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 type SubmitFormProps = {
   mode: string;
@@ -27,16 +30,19 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
 
   console.log("Email", email);
   console.log("Password", password);
-  
+
   const [validationErrorEmail, setValidationErrorEmail] =
     useState<boolean>(false);
   const [validationErrorPassword, setValidationErrorPassword] =
     useState<boolean>(false);
 
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+
   const SchemaValidation = (email: string, password: string) => {
     setValidationErrorEmail(false);
     setValidationErrorPassword(false);
-    let validSchema = true
+    let validSchema = true;
 
     if (email === "") {
       setValidationErrorEmail(true);
@@ -46,70 +52,53 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
       setValidationErrorPassword(true);
       validSchema = false;
     }
-    return validSchema
+    return validSchema;
   };
 
-  const onLogin = async (
-    e: React.FormEvent<HTMLFormElement>,
-    email: string,
-    password: string
-  ) => {
+  const onLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //validate the input data
-    // console.log("Login");
 
-    let isValidSchema = SchemaValidation(email, password)
+    let isValidSchema = SchemaValidation(email, password);
 
-    if (isValidSchema)
+    if (isValidSchema) {
       try {
-        console.log("Success")
-      } catch (error: any) {
-        console.log("Create User Error", error.message)
-      }
-      // try {
-      // const user = await signInWithEmailAndPassword(auth, email, password);
-      // console.log(user);
-      // const userId = localStorage.setItem("user", JSON.stringify(user));
-      // router.push("/");
-      // } catch (error) {
-      // setError(
-      // "There was an error when signing in. Please check email and password."
-      // );
+        const user = await signInWithEmailAndPassword(auth, email, password);
+        console.log("User", user);
+        const userId = localStorage.setItem("user", JSON.stringify(user));
+        // router.push("/");
+      } catch (error) {}
       console.log("Login");
-
-    //firestore logic
+      //firestore logic
+    }
   };
 
-  const onSignUp = async (
-    e: React.FormEvent<HTMLFormElement>,
-  ) => {
+  const onSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    //validate the input data
-    // console.log("Signup");
 
-    let isValidSchema = SchemaValidation(email, password)
+    let isValidSchema = SchemaValidation(email, password);
 
-    if (isValidSchema)
+    if (isValidSchema) {
       try {
-        console.log("Success")
-      } catch (error: any) {
-        console.log("Create User Error", error.message)
-      }
-      // try {
-      // const user = await signInWithEmailAndPassword(auth, email, password);
-      // console.log(user);
-      // const userId = localStorage.setItem("user", JSON.stringify(user));
-      // router.push("/");
-      // } catch (error) {
-      // setError(
-      // "There was an error when signing in. Please check email and password."
-      // );
+        const user = await createUserWithEmailAndPassword(email, password);
+        console.log("User", user);
+        const userId = localStorage.setItem("user", JSON.stringify(user));
+        // router.push("/");
+      } catch (error) {}
       console.log("Login");
-    //firestore logic
+      //firestore logic
+    }
   };
+
+  let onHandle;
+
+  if (mode === "Signup") {
+    onHandle = onSignUp;
+  } else {
+    onHandle = onLogin;
+  }
 
   return (
-    <form onSubmit={onSignUp}>
+    <form onSubmit={onHandle}>
       <FormControl
         borderStyle="solid"
         borderColor="red.500"
@@ -159,7 +148,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
             >
               {"toggle"}
             </Button>
-            <Button width="30%" margin="2px" type='submit'>
+            <Button width="30%" margin="2px" type="submit">
               Submit
             </Button>
           </Stack>

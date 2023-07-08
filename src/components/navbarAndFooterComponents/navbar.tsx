@@ -6,6 +6,8 @@ import SwitchTheme from "./themeswitch";
 import MediaQuery from "react-responsive";
 import NavbarDropdown from "./navbarDropdown";
 import SearchBar from "./searchBar";
+import { useSignOut } from "react-firebase-hooks/auth";
+import { auth } from "../../../firebaseConfig";
 
 type NavbarProps = {
   menu: string;
@@ -32,6 +34,8 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const router = useRouter();
 
+  const [signOut, loading, error] = useSignOut(auth);
+
   return (
     <div className={navstyles.navbarContainer}>
       <MediaQuery minWidth={641}>
@@ -49,6 +53,13 @@ const Navbar: React.FC<NavbarProps> = ({
             toggleIt={() => toggleTheme()}
           />
           <SearchBar search={search} />
+          <button onClick={async () => {
+          const success = await signOut();
+          if (success) {
+            alert('You are sign out');
+          }
+        }}
+>Logout</button>
         </div>
       </MediaQuery>
       <MediaQuery maxWidth={640}>

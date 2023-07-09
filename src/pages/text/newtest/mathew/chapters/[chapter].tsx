@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "../../../../../../data/greek_text.json";
 import dataEnglish from "../../../../../../data/english_text.json";
 import ChapterTemplate from "../../../../../components/chapterTemplate";
-import styles from "../../../../../styles/chapters.module.css";
+import styles from "../../../../../../styles/chapters.module.css";
 import ChaptersButtons from "../../../../../components/navbarAndFooterComponents/chaptersButtons";
 import { useRouter } from "next/router";
 
@@ -32,7 +32,7 @@ export default function Chapter1() {
     <>
       {chapter ? <ChapterTemplate author={"mathew"} chapter={chapter} /> : null}
       <div className="grid justify-center">
-        <div className="grid-cols-1 justify-center">
+        <div className={styles.chapterNavButton}>
           {chaptersArray.map((a: string, i: number) => (
             <ChaptersButtons i={i} a={a} hrefTemplate={hrefTemplate} />
           ))}

@@ -40,7 +40,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
-    const router = useRouter()
+  const router = useRouter();
 
   const SchemaValidation = (email: string, password: string) => {
     setValidationErrorEmail(false);
@@ -115,43 +115,47 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
           border="1px"
           padding="2"
           borderRadius="lg"
-          display="grid"
-          gridColumn="auto"
+          display="flex"
+          flexDirection="column"
         >
           <Stack spacing={3}>
-            <FormLabel>{mode}</FormLabel>
+            <FormLabel textAlign="center" fontSize="2xl" fontWeight={800}>
+              {mode}
+            </FormLabel>
             <FormLabel>{"Email"}</FormLabel>
             <Input
               htmlSize={8}
-              width="lg"
+              width={{ base: "auto", sm: "lg" }}
               size="sm"
               placeholder={"email"}
               type={"email"}
               onChange={(e) => setEmail(e.target.value)}
             />
             {validationErrorEmail ? <p>Email is invalid</p> : null}
-            <FormHelperText>{helper}</FormHelperText>
+            {/* <FormHelperText>{helper}</FormHelperText> */}
             <FormLabel>{"Password"}</FormLabel>
             <Input
               htmlSize={8}
-              width="lg"
+              width={{ base: "auto", sm: "lg" }}
               size="sm"
               placeholder={"password"}
               type={"password"}
               onChange={(e) => setPassword(e.target.value)}
             />
             {validationErrorPassword && <p>Password is invalid</p>}
-            <FormHelperText>{helper}</FormHelperText>
+            {/* <FormHelperText>{helper}</FormHelperText> */}
           </Stack>
           <Stack align="center" justify="center">
             <Button
+              variant="solid"
+              backgroundColor={"#EB9486"}
               width="30%"
               margin="2px"
               onClick={() => setToggleText(!toggleText)}
             >
               {"toggle"}
             </Button>
-            <Button width="30%" margin="2px" type="submit">
+            <Button variant="solid" backgroundColor={"#D9DE8A"} width="30%" margin="2px" type="submit">
               Submit
             </Button>
           </Stack>

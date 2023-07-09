@@ -39,7 +39,7 @@ const ChapterTemplate: React.FC<ChapterTemplateProps> = ({
   const array = text[author][chapter]["array"];
 
   return (
-    <div>
+    <div style={{width: "auto"}}>
       <EnglishTextSwitch
         setEnglishText={setEnglishText}
         englishText={englishText}

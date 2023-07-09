@@ -4,12 +4,12 @@ import SubmitForm from "./submitForm";
 type AuthPageProps = {};
 
 const AuthPage: React.FC<AuthPageProps> = () => {
-  const [toggleText, setToggleText] = useState<boolean>(false);
+  const [toggleText, setToggleText] = useState<string>("Not a member");
   
 
   return (
     <>
-      {toggleText === false ? (
+      {toggleText === "Not a member" ? (
         <SubmitForm
           helper="Help our community grow strong"
           toggleText={toggleText}

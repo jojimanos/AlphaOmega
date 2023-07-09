@@ -14,19 +14,21 @@ const Home: NextPage = () => {
 
   const [currentAuthState, setCurrentAuthState] = useState("unauthorised");
 
+  const [user] = useAuthState(auth)
+
   // const userId = typeof window === 'undefined' ? localStorage.getItem('user') : null 
 
   const router = useRouter()
 
   useEffect(() => {
     const userId = localStorage.getItem('user')
-    if(userId) {
+    if(userId !== null) {
       setCurrentAuthState("authorised")
     } else {
       setCurrentAuthState("unauthorised")
     }
     router.push("/")
-  }, [])
+  }, [user])
 
   return (
     <Flex align="center" justify="center">

@@ -11,6 +11,7 @@ import React, { SetStateAction, useEffect, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "next/router";
 
 type SubmitFormProps = {
   mode: string;
@@ -38,6 +39,8 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
 
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+
+    const router = useRouter()
 
   const SchemaValidation = (email: string, password: string) => {
     setValidationErrorEmail(false);

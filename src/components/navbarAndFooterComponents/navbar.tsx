@@ -8,6 +8,7 @@ import NavbarDropdown from "./navbarDropdown";
 import SearchBar from "./searchBar";
 import { useSignOut } from "react-firebase-hooks/auth";
 import { auth } from "../../../firebaseConfig";
+import SignOutButtons from "./signOutButton";
 
 type NavbarProps = {
   menu: string;
@@ -39,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({
   return (
     <div className={navstyles.navbarContainer}>
       <MediaQuery minWidth={641}>
-        <div className="grid grid-cols-4 text-1xl pb-5 pt-10">
+        <div className="grid grid-cols-5 text-1xl pb-5 pt-10">
           <NavButtons text={menu} path={"/"} />
           <SwitchTheme
             themeswitch={themeswitch}
@@ -53,19 +54,21 @@ const Navbar: React.FC<NavbarProps> = ({
             toggleIt={() => toggleTheme()}
           />
           <SearchBar search={search} />
-          <button onClick={async () => {
-          const success = await signOut();
-          if (success) {
-            alert('You are sign out');
-          }
-        }}
->Logout</button>
+          {/* <button onClick={}>Logout</button> */}
+          <SignOutButtons
+            text="LogOut"
+            onClick={async () => {
+              const success = await signOut();
+              localStorage.removeItem("user");
+              // router.push("/");
+            }}
+          />
         </div>
       </MediaQuery>
       <MediaQuery maxWidth={640}>
         <div className="grid grid-rows-1 text-1xl pb-5 pt-10 justify-center">
           <NavbarDropdown text=" ">
-            <div className="pt-4 grid grid-rows-4 gap-6">
+            <div className="pt-4 grid grid-rows-5 gap-6">
               <NavButtons text={menu} path={"/"} />
               <SwitchTheme
                 themeswitch={themeswitch}
@@ -77,6 +80,14 @@ const Navbar: React.FC<NavbarProps> = ({
                 asPath={asPath}
                 languageswitch={languageswitch}
                 toggleIt={() => toggleTheme()}
+              />
+              <SignOutButtons
+                text="LogOut"
+                onClick={async () => {
+                  const success = await signOut();
+                  localStorage.removeItem("user");
+                  router.push("/");
+                }}
               />
             </div>
           </NavbarDropdown>

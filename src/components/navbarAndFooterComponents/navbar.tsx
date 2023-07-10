@@ -68,7 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
       </MediaQuery>
       <MediaQuery maxWidth={640}>
-        <div className="grid grid-rows-1 text-1xl pb-5 pt-10 justify-center">
+        <div className="grid grid-rows-1 text-1xl pb-2 pt-2 justify-center">
           <NavbarDropdown text=" ">
             <div className="pt-4 grid grid-rows-5 gap-6">
               <NavButtons text={menu} path={"/"} />

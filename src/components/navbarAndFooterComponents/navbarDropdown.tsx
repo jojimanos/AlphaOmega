@@ -31,7 +31,7 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ text, children }) => {
   }, [open]);
 
   return (
-    <div ref={dropdownRef} className="dropdown">
+    <div ref={dropdownRef} className="">
       <button
         ref={dropdownRef}
         // className={styles.navButton}

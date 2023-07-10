@@ -31,3 +31,9 @@
   /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
   pointer-events: none; /* Ensure the text doesn't interfere with button clicks */
 }
+
+@media (max-width: 640px) {
+  .navbarContainer {
+    margin-bottom: 1rem;
+  }
+}

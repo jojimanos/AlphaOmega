@@ -18,6 +18,15 @@ type SubmitFormProps = {
   helper: string;
   toggleText: string;
   setToggleText: React.Dispatch<React.SetStateAction<string>>;
+    email: string,
+    emailPlaceholder: string,
+    emailError: string
+    password: string,
+    passwordPlaceholder: string,
+    passwordError: string
+    notAMember: string,
+    alreadyAMember: string,
+    submit: string,
 };
 
 const SubmitForm: React.FC<SubmitFormProps> = ({
@@ -25,9 +34,18 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
   helper,
   toggleText,
   setToggleText,
+    email,
+    emailPlaceholder,
+    emailError,
+    password,
+    passwordPlaceholder,
+    passwordError,
+    notAMember,
+    alreadyAMember,
+    submit,
 }) => {
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [emailValue, setEmailValue] = useState<string>("");
+  const [passwordValue, setPasswordValue] = useState<string>("");
 
   console.log("Email", email);
   console.log("Password", password);
@@ -42,16 +60,16 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
 
   const router = useRouter();
 
-  const SchemaValidation = (email: string, password: string) => {
+  const SchemaValidation = (emailValue: string, passwordValue: string) => {
     setValidationErrorEmail(false);
     setValidationErrorPassword(false);
     let validSchema = true;
 
-    if (email === "") {
+    if (emailValue === "") {
       setValidationErrorEmail(true);
       validSchema = false;
     }
-    if (password.length === 0) {
+    if (passwordValue.length === 0) {
       setValidationErrorPassword(true);
       validSchema = false;
     }
@@ -61,11 +79,11 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
   const onLogin = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    let isValidSchema = SchemaValidation(email, password);
+    let isValidSchema = SchemaValidation(emailValue, passwordValue);
 
     if (isValidSchema) {
       try {
-        const user = await signInWithEmailAndPassword(auth, email, password);
+        const user = await signInWithEmailAndPassword(auth, emailValue, passwordValue);
         console.log("User", user);
         const userId = localStorage.setItem("user", JSON.stringify(user));
         // router.push("/");
@@ -78,11 +96,11 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
   const onSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    let isValidSchema = SchemaValidation(email, password);
+    let isValidSchema = SchemaValidation(emailValue, passwordValue);
 
     if (isValidSchema) {
       try {
-        const user = await createUserWithEmailAndPassword(email, password);
+        const user = await createUserWithEmailAndPassword(emailValue, passwordValue);
         console.log("User", user);
         const userId = localStorage.setItem("user", JSON.stringify(user));
         // router.push("/");
@@ -122,41 +140,42 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
             <FormLabel textAlign="center" fontSize="2xl" fontWeight={800}>
               {mode}
             </FormLabel>
-            <FormLabel>{"Email"}</FormLabel>
+            <FormLabel>{email}</FormLabel>
             <Input
               htmlSize={8}
               width={{ base: "auto", sm: "lg" }}
               size="sm"
-              placeholder={"email"}
+              placeholder={emailPlaceholder}
               type={"email"}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmailValue(e.target.value)}
             />
-            {validationErrorEmail ? <p>Email is invalid</p> : null}
+            {validationErrorEmail ? <p>{emailError}</p> : null}
             {/* <FormHelperText>{helper}</FormHelperText> */}
-            <FormLabel>{"Password"}</FormLabel>
+            <FormLabel>{password}</FormLabel>
             <Input
               htmlSize={8}
               width={{ base: "auto", sm: "lg" }}
               size="sm"
-              placeholder={"password"}
+              placeholder={passwordPlaceholder}
               type={"password"}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPasswordValue(e.target.value)}
             />
-            {validationErrorPassword && <p>Password is invalid</p>}
+            {validationErrorPassword && <p>{passwordError}</p>}
             {/* <FormHelperText>{helper}</FormHelperText> */}
           </Stack>
           <Stack align="center" justify="center">
             <Button
               variant="solid"
               backgroundColor={"#EB9486"}
-              width="30%"
+              width={{base: "auto", sm: "30%"}}
+              // maxWidth="30%"
               margin="2px"
-              onClick={() => setToggleText(toggleText === "Not a member" ? "Already a member" : "Not a member")}
+              onClick={() => setToggleText(toggleText === notAMember ? alreadyAMember : notAMember)}
             >
               {toggleText}
             </Button>
-            <Button variant="solid" backgroundColor={"#D9DE8A"} width="30%" margin="2px" type="submit">
-              Submit
+            <Button variant="solid" backgroundColor={"#D9DE8A"} width={{base: "auto", sm: "30%"}} margin="2px" type="submit">
+              {submit}
             </Button>
           </Stack>
         </Flex>

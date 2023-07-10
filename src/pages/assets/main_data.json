@@ -15,9 +15,22 @@
       "search": "Search",
       "languageswitch": "Language",
       "themeswitch": "Switch\nTheme",
+      "logout": "Logout",
       "pageNotFoundHeader": "Search and ye shall find.",
       "pageNotFoundText": "404 - Page not found",
-      "wordsearch": "Make a search in:"
+      "wordsearch": "Make a search in:",
+      "login": "Login",
+      "signup": "Signup",
+      "email": "Email",
+      "emailPlaceholder": "email",
+      "emailError": "Invalid address",
+      "password": "Password",
+      "passwordPlaceholder": "password",
+      "passwordError": "Invalid password",
+      "notAMember": "Not a member?",
+      "alreadyAMember": "Alredy a member?",
+      "submit": "Submit"
+
     },
     {
       "locale": "Espagnol",
@@ -58,9 +71,21 @@
       "search": "Ἀναζήτηση",
       "languageswitch": "Γλῶσσα",
       "themeswitch": "Ἀλλαγὴ\nΘέματος",
+      "logout": "Ἔξοδος",
       "pageNotFoundHeader": "Αἰτεῖτε, καὶ δοθήσεται ὑμῖν.",
       "pageNotFoundText": "404 - Ἡ σελίδα δὲ βρέθηκε",
-      "wordsearch": "Αναζήτηση σε:"
+      "wordsearch": "Αναζήτηση σε:",
+      "login": "Εἴσοδος",
+      "signup": "Ἐγγραφή",
+      "email": "Διεύθυνση",
+      "emailPlaceholder": "διεύθυνση",
+      "emailError": "Μὴ ἔγκυρη διεύθυνση",
+      "password": "Κωδικός",
+      "passwordPlaceholder": "κωδικός",
+      "passwordError": "Μὴ ἔγκυρος κωδικός",
+      "notAMember": "Μὴ ἐγγεγραμμένος;",
+      "alreadyAMember": "Ἤδη ἐγγεγραμμένος;",
+      "submit": "Ὑποβολή"
     }
   ]
 }

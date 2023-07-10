@@ -12,6 +12,7 @@ import SignOutButtons from "./signOutButton";
 
 type NavbarProps = {
   menu: string;
+  logout: string;
   settings: string;
   search: string;
   languageswitch: string;
@@ -24,6 +25,7 @@ type NavbarProps = {
 
 const Navbar: React.FC<NavbarProps> = ({
   menu,
+  logout,
   settings,
   search,
   languageswitch,
@@ -56,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = ({
           <SearchBar search={search} />
           {/* <button onClick={}>Logout</button> */}
           <SignOutButtons
-            text="LogOut"
+            text={logout}
             onClick={async () => {
               const success = await signOut();
               localStorage.removeItem("user");
@@ -82,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({
                 toggleIt={() => toggleTheme()}
               />
               <SignOutButtons
-                text="LogOut"
+                text={logout}
                 onClick={async () => {
                   const success = await signOut();
                   localStorage.removeItem("user");

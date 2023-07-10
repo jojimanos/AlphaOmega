@@ -34,13 +34,21 @@ function MyApp({ Component, pageProps }: AppProps) {
                   .filter((p) => p.locale === locale)
                   .map(
                     (
-                      { menu, settings, search, themeswitch, languageswitch },
+                      {
+                        menu,
+                        logout,
+                        settings,
+                        search,
+                        themeswitch,
+                        languageswitch,
+                      },
                       i
                     ) => {
                       return (
                         <Navbar
                           key={i}
                           menu={menu}
+                          logout={logout}
                           settings={settings}
                           search={search}
                           languageswitch={languageswitch}

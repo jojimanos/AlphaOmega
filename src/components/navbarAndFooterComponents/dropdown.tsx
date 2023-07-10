@@ -45,34 +45,20 @@ function Dropdown(props: any) {
           height={120}
           width={120}
         />
-        <span>{props.languageswitch}</span>
+        {/* {<span>{props.languageswitch}</span>} */}
+        {open ? (
+          <ul>
+            <li>
+              <LanguageSwitch
+                locales={props.locales}
+                locale={props.locale}
+                asPath={props.asPath}
+                languageswitch={props.languageswitch}
+              />
+            </li>
+          </ul>
+        ) : <>{props.languageswitch}</>}
       </button>
-      {open && (
-        <ul>
-          <li
-            className="
-              py-2
-              px-4
-              flex
-              items-start
-              text-left
-              bg-transparent
-              text-gray-700
-              hover:bg-gray-100
-            "
-          >
-            <LanguageSwitch
-              locales={props.locales}
-              locale={props.locale}
-              asPath={props.asPath}
-              languageswitch={props.languageswitch}
-            />
-          </li>
-          <li>
-            <hr />
-          </li>
-        </ul>
-      )}
     </>
   );
   {

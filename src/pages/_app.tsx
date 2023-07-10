@@ -36,11 +36,11 @@ function MyApp({ Component, pageProps }: AppProps) {
                     (
                       {
                         menu,
-                        logout,
                         settings,
                         search,
                         themeswitch,
                         languageswitch,
+                        logout,
                       },
                       i
                     ) => {

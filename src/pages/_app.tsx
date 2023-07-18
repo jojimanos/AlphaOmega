@@ -12,6 +12,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/Home.module.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Footer from "../components/navbarAndFooterComponents/footer";
+import { RecoilRoot } from "recoil"
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState("light");
@@ -27,48 +28,50 @@ function MyApp({ Component, pageProps }: AppProps) {
       <body>
         <div className={styles.background}>
           <div className={styles.container}>
-            <ChakraProvider>
-              <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
-                <GlobalStyles />
-                {Data.main_data
-                  .filter((p) => p.locale === locale)
-                  .map(
-                    (
-                      {
-                        menu,
-                        settings,
-                        search,
-                        themeswitch,
-                        languageswitch,
-                        logout,
-                      },
-                      i
-                    ) => {
-                      return (
-                        <Navbar
-                          key={i}
-                          menu={menu}
-                          logout={logout}
-                          settings={settings}
-                          search={search}
-                          languageswitch={languageswitch}
-                          themeswitch={themeswitch}
-                          toggleTheme={toggleTheme}
-                          locales={locales}
-                          locale={locale}
-                          asPath={asPath}
-                        />
-                      );
-                    }
-                  )}
-                <Component {...pageProps} />
-                {Data.main_data
-                  .filter((p) => p.locale === locale)
-                  .map((text, index) => (
-                    <Footer key={index} powered={text.powered} />
-                  ))}
-              </ThemeProvider>
-            </ChakraProvider>
+            <RecoilRoot>
+              <ChakraProvider>
+                <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
+                  <GlobalStyles />
+                  {Data.main_data
+                    .filter((p) => p.locale === locale)
+                    .map(
+                      (
+                        {
+                          menu,
+                          settings,
+                          search,
+                          themeswitch,
+                          languageswitch,
+                          logout,
+                        },
+                        i
+                      ) => {
+                        return (
+                          <Navbar
+                            key={i}
+                            menu={menu}
+                            logout={logout}
+                            settings={settings}
+                            search={search}
+                            languageswitch={languageswitch}
+                            themeswitch={themeswitch}
+                            toggleTheme={toggleTheme}
+                            locales={locales}
+                            locale={locale}
+                            asPath={asPath}
+                          />
+                        );
+                      }
+                    )}
+                  <Component {...pageProps} />
+                  {Data.main_data
+                    .filter((p) => p.locale === locale)
+                    .map((text, index) => (
+                      <Footer key={index} powered={text.powered} />
+                    ))}
+                </ThemeProvider>
+              </ChakraProvider>
+            </RecoilRoot>
           </div>
         </div>
       </body>

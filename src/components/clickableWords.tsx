@@ -30,9 +30,11 @@ export default function ClickableWords(props: any): JSX.Element[] {
   const string3: string = string2.slice(0, -4);
   const words: string[] = string3.split(/ /g); //Splits words
   const words2 = words.map((w, index) => {
+
     return (
       <span key={index}>
         <button
+          name="word"
           key={index}
           className="hover:text-blue-700 hover:underline"
           onClick={() => {

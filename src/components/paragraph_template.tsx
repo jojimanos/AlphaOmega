@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clickableWords from "./clickableWords";
 import MediaQuery from "react-responsive";
 import simpleWords from "./simpleWords";
 import styles from "../../styles/Home.module.css";
+import { useRecoilValue } from "recoil";
+import { wordSearch } from "../atom/wordSearch";
 
 type ParagraphTemplateProps = {
   stringParagraph: string;
@@ -23,10 +25,26 @@ const ParagraphTemplate: React.FC<ParagraphTemplateProps> = ({
     setParagraph(!paragraph);
   }
 
+  const searchValue = useRecoilValue(wordSearch)
+
   const greek = clickableWords(stringParagraph);
 
   const english = simpleWords(stringEnglishParagraph);
 
+  const collection = document.getElementsByName("word")
+
+  const textToSearch = Array.from(collection)
+
+  const text = textToSearch.map((t) => { return t.textContent })
+
+  console.log("textToSearch", text)
+
+  useEffect(() => {
+    // if (searchValue === searchValue)
+    // {console.log("Search Result", true)}
+    // else {console.log("Search result", false)}
+    text.filter((e) => e === searchValue ? console.log("Search is valid", true) : null)
+  }, [searchValue])
   return (
     <div className={styles.paragraph}>
       <MediaQuery minWidth={641}>

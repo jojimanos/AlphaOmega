@@ -1,4 +1,4 @@
-import React, { SetStateAction, useState } from "react";
+import React, { SetStateAction, useEffect, useState } from "react";
 import EnglishTextSwitch from "./englishTextSwitch";
 import dynamic from "next/dynamic";
 import ParagraphTemplate from "./paragraph_template";
@@ -6,6 +6,8 @@ import reactElementToJSXString from "react-element-to-jsx-string";
 import data from "../../data/greek_text.json";
 import dataEnglish from "../../data/english_text.json";
 import styles from "../../styles/chapters.module.css";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { highlightStatus, wordSearch } from "../atom/wordSearch";
 
 type ChapterTemplateProps = {
   author: string;
@@ -38,8 +40,34 @@ const ChapterTemplate: React.FC<ChapterTemplateProps> = ({
 
   const array = text[author][chapter]["array"];
 
+  const searchValue = useRecoilValue(wordSearch)
+
+  const collection = document.getElementsByName("word")
+
+  const textToSearch = Array.from(collection)
+
+  const text2 = textToSearch.map((t) => { return t.textContent })
+
+  const text3 = text2.map((e, index) => {return  false})
+
+  // console.log("textToSearch", text)
+
+  const setHighlightText = useSetRecoilState(highlightStatus)
+  const highlightText = useRecoilValue(highlightStatus)
+
+  useEffect(() => {
+    text2.map((e, index) => e === searchValue ? text3[index] = true : false)
+    setHighlightText(text3)
+    console.log("HERE ARE THE STATS", text3)
+  }, [searchValue])
+
+  useEffect(() => {
+    if (searchValue === " Χριστοῦ ") { console.log("Search Result", true) }
+    else { console.log("Search result", false) }
+    text2.filter((e) => e === searchValue ? console.log("Search is valid", true) : null)
+  }, [searchValue])
   return (
-    <div style={{width: "auto"}}>
+    <div style={{ width: "auto" }}>
       <EnglishTextSwitch
         setEnglishText={setEnglishText}
         englishText={englishText}

@@ -4,3 +4,8 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.highlightedStyle {
+  color: white;
+  background-color: red;
+}

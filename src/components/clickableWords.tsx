@@ -2,9 +2,11 @@ import { useDisclosure } from "@chakra-ui/react";
 import myJson from "../pages/assets/bible_names.json";
 import Data from "../pages/assets/main_data.json";
 import ModalComponent from "./modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useClickableWord } from "../../methods/useClickableWord";
 import { useRouter } from "next/router";
+import { useRecoilValue, useSetRecoilState } from "recoil";
+import { highlightStatus, wordSearch } from "../atom/wordSearch";
 
 export default function ClickableWords(props: any): JSX.Element[] {
   const incoming = JSON.stringify(myJson);
@@ -29,14 +31,26 @@ export default function ClickableWords(props: any): JSX.Element[] {
   const string2: string = string.slice(25); //Removes the starting tags from text
   const string3: string = string2.slice(0, -4);
   const words: string[] = string3.split(/ /g); //Splits words
+
+
+  const searchValue = useRecoilValue(wordSearch) 
+
+  const highlightText = useRecoilValue(highlightStatus)
+
   const words2 = words.map((w, index) => {
+
+    // useEffect(() => {
+    // setHighlightText((prev) => [...prev, words[index] === searchValue ? true : false])
+    
+    // console.log("Highlight status", highlightText)
+    // }, [wordSearch])
 
     return (
       <span key={index}>
         <button
           name="word"
           key={index}
-          className="hover:text-blue-700 hover:underline"
+          className={searchValue === w ? "text-white bg-red-500" : "hover:text-blue-700 hover:underline"}
           onClick={() => {
             searchForTheWord(w, bibleNames);
           }}

@@ -25,26 +25,26 @@ const ParagraphTemplate: React.FC<ParagraphTemplateProps> = ({
     setParagraph(!paragraph);
   }
 
-  const searchValue = useRecoilValue(wordSearch)
+  // const searchValue = useRecoilValue(wordSearch)
 
   const greek = clickableWords(stringParagraph);
 
   const english = simpleWords(stringEnglishParagraph);
 
-  const collection = document.getElementsByName("word")
+  // const collection = document.getElementsByName("word")
 
-  const textToSearch = Array.from(collection)
+  // const textToSearch = Array.from(collection)
 
-  const text = textToSearch.map((t) => { return t.textContent })
+  // const text = textToSearch.map((t) => { return t.textContent })
 
-  console.log("textToSearch", text)
+  // console.log("textToSearch", text)
 
-  useEffect(() => {
+  // useEffect(() => {
     // if (searchValue === searchValue)
     // {console.log("Search Result", true)}
     // else {console.log("Search result", false)}
-    text.filter((e) => e === searchValue ? console.log("Search is valid", true) : null)
-  }, [searchValue])
+    // text.filter((e) => e === searchValue ? console.log("Search is valid", true) : null)
+  // }, [searchValue])
   return (
     <div className={styles.paragraph}>
       <MediaQuery minWidth={641}>

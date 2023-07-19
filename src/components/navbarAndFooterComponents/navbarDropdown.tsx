@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 // import styles from "../../../styles/Home.module.css";
-// import styles from "../../../styles/navbar.module.css";
+import styles from "../../../styles/navbar.module.css";
 import Image from "next/image";
 
 type NavbarDropdownProps = {
@@ -45,31 +45,15 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ text, children }) => {
           // className={styles.navButtonIcon}
           src="/mobileMenu.png"
           alt=""
-          height={80}
-          width={80}
+          height={140}
+          width={140}
         />
         <span>{text}</span>
       </button>
       {open ? (
-        <ul>
-          <li
-          // className="
-          // py-2
-          // px-4
-          // flex
-          // items-start
-          // text-left
-          // bg-transparent
-          // text-gray-700
-          // hover:bg-gray-100
-          // "
-          >
+          <div className="w-full">
             {children}
-          </li>
-          <li>
-            <hr />
-          </li>
-        </ul>
+          </div>
       ) : null}
     </div>
   );

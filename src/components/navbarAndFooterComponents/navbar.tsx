@@ -56,7 +56,6 @@ const Navbar: React.FC<NavbarProps> = ({
             toggleIt={() => toggleTheme()}
           />
           <SearchBar search={search} />
-          {/* <button onClick={}>Logout</button> */}
           <SignOutButtons
             text={logout}
             onClick={async () => {
@@ -68,31 +67,36 @@ const Navbar: React.FC<NavbarProps> = ({
         </div>
       </MediaQuery>
       <MediaQuery maxWidth={640}>
-        <div className="grid grid-rows-1 text-1xl pb-2 pt-2 justify-center">
-          <NavbarDropdown text=" ">
-            <div className="pt-4 grid grid-rows-5 gap-6">
-              <NavButtons text={menu} path={"/"} />
-              <SwitchTheme
-                themeswitch={themeswitch}
-                toggleTheme={() => toggleTheme()}
-              />
-              <Dropdown
-                locales={locales}
-                locale={locale}
-                asPath={asPath}
-                languageswitch={languageswitch}
-                toggleIt={() => toggleTheme()}
-              />
-              <SignOutButtons
-                text={logout}
-                onClick={async () => {
-                  const success = await signOut();
-                  localStorage.removeItem("user");
-                  router.push("/");
-                }}
-              />
+        <div className="text-1xl pb-2 pt-2 w-full">
+          <div className="flex justify-center w-full">
+          <NavbarDropdown text="">
+            <div className="grid grid-cols-1 w-full">
+              <div className="pt-8 pb-8 grid grid-rows-5 gap-20 w-full">
+                <NavButtons text={menu} path={"/"} />
+                <SwitchTheme
+                  themeswitch={themeswitch}
+                  toggleTheme={() => toggleTheme()}
+                />
+                <Dropdown
+                  locales={locales}
+                  locale={locale}
+                  asPath={asPath}
+                  languageswitch={languageswitch}
+                  toggleIt={() => toggleTheme()}
+                />
+                <SearchBar search={search} />
+                <SignOutButtons
+                  text={logout}
+                  onClick={async () => {
+                    const success = await signOut();
+                    localStorage.removeItem("user");
+                    router.push("/");
+                  }}
+                />
+              </div>
             </div>
           </NavbarDropdown>
+</div>
         </div>
       </MediaQuery>
     </div>

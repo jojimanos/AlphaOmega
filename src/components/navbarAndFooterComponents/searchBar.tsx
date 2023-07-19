@@ -1,8 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "../../../styles/navbar.module.css";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { wordSearch } from '../../atom/wordSearch'
+import { useRouter } from "next/router";
 
 type SearchBarProps = {
   search: string;
@@ -14,9 +15,21 @@ const SearchBar: React.FC<SearchBarProps> = ({ search }) => {
 
   const searchValue = useRecoilValue(wordSearch)
 
+  const router = useRouter()
+
   useEffect(() => {
-    // console.log("Word search", searchValue)
+  router.events.on("routeChangeComplete", () => {
+    inputSearch("")
   })
+
+  return () => {
+    router.events.off('routeChangeComplete', () => {
+      inputSearch("")
+    })
+  }
+  }, [])
+
+  console.log(searchValue)
 
   return (
     <button onClick={() => { }} className={styles.navButton}>
@@ -29,7 +42,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ search }) => {
       />
       <span>
         <p className="sm:text-center">
-          <input className="w-20 bg-transparent" type="text" placeholder={search} onChange={(e) => inputSearch(prev => prev = e.target.value)} />
+          <input value={searchValue} className="w-20 bg-transparent" type="text" placeholder={search} onChange={(e) => inputSearch(prev => prev = e.target.value)} />
         </p>
       </span>
     </button>

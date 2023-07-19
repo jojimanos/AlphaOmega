@@ -66,6 +66,7 @@ const ChapterTemplate: React.FC<ChapterTemplateProps> = ({
     else { console.log("Search result", false) }
     text2.filter((e) => e === searchValue ? console.log("Search is valid", true) : null)
   }, [searchValue])
+
   return (
     <div style={{ width: "auto" }}>
       <EnglishTextSwitch

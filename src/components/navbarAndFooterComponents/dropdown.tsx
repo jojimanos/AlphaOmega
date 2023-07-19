@@ -27,7 +27,6 @@ function Dropdown(props: any) {
   }, [open]);
 
   return (
-    // <div ref={dropdownRef} className="dropdown">
     <>
       <button
         ref={dropdownRef}
@@ -45,7 +44,6 @@ function Dropdown(props: any) {
           height={120}
           width={120}
         />
-        {/* {<span>{props.languageswitch}</span>} */}
         {open ? (
           <ul>
             <li>
@@ -61,9 +59,6 @@ function Dropdown(props: any) {
       </button>
     </>
   );
-  {
-    /* </div> */
-  }
 }
 
 export default Dropdown;

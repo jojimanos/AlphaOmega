@@ -16,8 +16,8 @@ import { useRouter } from "next/router";
 type SubmitFormProps = {
   mode: string;
   helper: string;
-  toggleText: string;
-  setToggleText: React.Dispatch<React.SetStateAction<string>>;
+  toggleText: boolean;
+  setToggleText: React.Dispatch<React.SetStateAction<boolean>>;
     email: string,
     emailPlaceholder: string,
     emailError: string
@@ -170,9 +170,9 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
               width={{base: "auto", sm: "30%"}}
               // maxWidth="30%"
               margin="2px"
-              onClick={() => setToggleText(toggleText === notAMember ? alreadyAMember : notAMember)}
+              onClick={() => setToggleText(toggleText === true ? false : true)}
             >
-              {toggleText}
+              {toggleText ? notAMember : alreadyAMember}
             </Button>
             <Button variant="solid" backgroundColor={"#D9DE8A"} width={{base: "auto", sm: "30%"}} margin="2px" type="submit">
               {submit}

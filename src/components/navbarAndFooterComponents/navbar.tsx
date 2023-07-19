@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({
             onClick={async () => {
               const success = await signOut();
               localStorage.removeItem("user");
-              // router.push("/");
+              router.push("/");
             }}
           />
         </div>

@@ -50,7 +50,7 @@ export default function ClickableWords(props: any): JSX.Element[] {
         <button
           name="word"
           key={index}
-          className={searchValue === w ? "text-white bg-red-500" : "hover:text-blue-700 hover:underline"}
+          className={searchValue === w ? "text-white bg-red-500" : "hover:text-blue-700 hover:underline select-text"}
           onClick={() => {
             searchForTheWord(w, bibleNames);
           }}

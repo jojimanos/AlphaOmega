@@ -29,7 +29,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ search }) => {
       />
       <span>
         <p className="sm:text-center">
-          <input className="w-20" type="text" placeholder={search} onChange={(e) => inputSearch(prev => prev = e.target.value)} />
+          <input className="w-20 bg-transparent" type="text" placeholder={search} onChange={(e) => inputSearch(prev => prev = e.target.value)} />
         </p>
       </span>
     </button>

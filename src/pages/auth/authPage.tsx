@@ -28,11 +28,11 @@ const AuthPage: React.FC<AuthPageProps> = ({
   alreadyAMember,
   submit,
 }) => {
-  const [toggleText, setToggleText] = useState<string>(notAMember);
+  const [toggleText, setToggleText] = useState<boolean>(true);
 
   return (
     <>
-      {toggleText === notAMember ? (
+      {toggleText === true ? (
         <SubmitForm
           helper="Help our community grow strong"
           toggleText={toggleText}

@@ -55,17 +55,17 @@ const ChapterTemplate: React.FC<ChapterTemplateProps> = ({
   const setHighlightText = useSetRecoilState(highlightStatus)
   const highlightText = useRecoilValue(highlightStatus)
 
-  useEffect(() => {
-    text2.map((e, index) => e === searchValue ? text3[index] = true : false)
-    setHighlightText(text3)
-    console.log("HERE ARE THE STATS", text3)
-  }, [searchValue])
-
-  useEffect(() => {
-    if (searchValue === " Χριστοῦ ") { console.log("Search Result", true) }
-    else { console.log("Search result", false) }
-    text2.filter((e) => e === searchValue ? console.log("Search is valid", true) : null)
-  }, [searchValue])
+  // useEffect(() => {
+    // text2.map((e, index) => e === searchValue ? text3[index] = true : false)
+    // setHighlightText(text3)
+    // console.log("HERE ARE THE STATS", text3)
+  // }, [searchValue])
+// 
+  // useEffect(() => {
+    // if (searchValue === " Χριστοῦ ") { console.log("Search Result", true) }
+    // else { console.log("Search result", false) }
+    // text2.filter((e) => e === searchValue ? console.log("Search is valid", true) : null)
+  // }, [searchValue])
 
   return (
     <div style={{ width: "auto" }}>

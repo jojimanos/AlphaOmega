@@ -18,21 +18,24 @@ const SearchBar: React.FC<SearchBarProps> = ({ search }) => {
   const router = useRouter()
 
   useEffect(() => {
-  router.events.on("routeChangeComplete", () => {
-    inputSearch("")
-  })
-
-  return () => {
-    router.events.off('routeChangeComplete', () => {
+    router.events.on("routeChangeComplete", () => {
       inputSearch("")
     })
-  }
+
+    return () => {
+      router.events.off('routeChangeComplete', () => {
+        inputSearch("")
+      })
+    }
   }, [])
 
   console.log(searchValue)
 
   return (
-    <button onClick={() => { }} className={styles.navButton}>
+    <button
+
+      id={styles.navSearch}
+      onClick={() => { }} className={styles.navButton}>
       <Image
         className={styles.navButtonIcon}
         src="/search.png"

@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-// import styles from "../../../styles/Home.module.css";
 import LanguageSwitch from "./language_switch";
 import styles from "../../../styles/navbar.module.css";
 import Image from "next/image";
@@ -40,7 +39,7 @@ function Dropdown(props: any) {
         <Image
           className={styles.navButtonIcon}
           src="/scroll.png"
-          alt=""
+          alt="navButtonIcon"
           height={120}
           width={120}
         />

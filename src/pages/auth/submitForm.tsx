@@ -88,7 +88,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
         const userId = localStorage.setItem("user", JSON.stringify(user));
         // router.push("/");
       } catch (error) {}
-      console.log("Login");
+      console.log("Login error");
       //firestore logic
     }
   };
@@ -105,7 +105,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
         const userId = localStorage.setItem("user", JSON.stringify(user));
         // router.push("/");
       } catch (error) {}
-      console.log("Login");
+      console.log("Sign up error");
       //firestore logic
     }
   };
@@ -160,7 +160,7 @@ const SubmitForm: React.FC<SubmitFormProps> = ({
               type={"password"}
               onChange={(e) => setPasswordValue(e.target.value)}
             />
-            {validationErrorPassword && <p>{passwordError}</p>}
+            {validationErrorPassword ? <p>{passwordError}</p> : null}
             {/* <FormHelperText>{helper}</FormHelperText> */}
           </Stack>
           <Stack align="center" justify="center">

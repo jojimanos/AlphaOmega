@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-// import styles from "../../../styles/Home.module.css";
-import styles from "../../../styles/navbar.module.css";
 import Image from "next/image";
 
 type NavbarDropdownProps = {
@@ -34,7 +32,6 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ text, children }) => {
     <div ref={dropdownRef} className="">
       <button
         ref={dropdownRef}
-        // className={styles.navButton}
         type="button"
         id="dropdownMenuButton1"
         data-bs-toggle="dropdown"
@@ -42,7 +39,6 @@ const NavbarDropdown: React.FC<NavbarDropdownProps> = ({ text, children }) => {
         onClick={handleButtonClick}
       >
         <Image
-          // className={styles.navButtonIcon}
           src="/mobileMenu.png"
           alt=""
           height={140}

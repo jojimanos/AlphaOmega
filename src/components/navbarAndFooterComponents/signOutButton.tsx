@@ -17,7 +17,7 @@ const SignOutButtons: React.FC<SignOutButtonsProps> = ({ text, onClick }) => {
       <Image
         className={styles.navButtonIcon}
         src="/scroll.png"
-        alt=""
+        alt="navButtonIcon"
         height={120}
         width={120}
       />

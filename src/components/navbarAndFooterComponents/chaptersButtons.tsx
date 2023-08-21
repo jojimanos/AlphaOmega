@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "../../../styles/chapters.module.css";
+
 type ChaptersButtonProps = {
   i: number;
   a: string;
